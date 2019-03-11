@@ -5,6 +5,8 @@
  */
 package accesoDatos;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Rob Guerrero
@@ -13,5 +15,5 @@ public interface DAOConexion {
    
     public void transformarQuerySet();
     
-    public void getConexion();
+    public void getConexion(Connection conexion);
 }

@@ -7,8 +7,13 @@ package accesoDatos;
 
 /**
  *
- * @author rob
+ * @author roberto
  */
-public class ConexionBD {
-    
+public class Pruebas {
+    public static void main(String[] args) {
+        ConexionBD bd = new ConexionBD();
+        
+        
+        
+    }
 }

@@ -12,7 +12,9 @@ import java.sql.Connection;
  * @author Rob Guerrero
  */
 public interface DAOConexion {
-   
+    ConexionBD conexion = new ConexionBD();
+
+    
     public void transformarQuerySet();
     
     public void getConexion(Connection conexion);

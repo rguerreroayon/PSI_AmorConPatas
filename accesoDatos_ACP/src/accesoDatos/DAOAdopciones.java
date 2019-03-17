@@ -13,9 +13,11 @@ import java.sql.Connection;
  */
 public class DAOAdopciones implements DAOConexion  {
 
+    
+    
     @Override
     public void transformarQuerySet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     @Override

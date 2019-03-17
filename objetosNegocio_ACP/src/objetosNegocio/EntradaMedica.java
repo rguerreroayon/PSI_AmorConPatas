@@ -37,6 +37,14 @@ public class EntradaMedica {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public int getIdAnimal() {
+        return idAnimal;
+    }
+
+    public void setIdAnimal(int idAnimal) {
+        this.idAnimal = idAnimal;
+    }
     
     
 }

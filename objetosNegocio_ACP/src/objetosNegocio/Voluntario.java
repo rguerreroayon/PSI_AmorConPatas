@@ -12,7 +12,6 @@ package objetosNegocio;
 public class Voluntario extends Persona{
     private int idAdoptante;
     private String username;
-    private String pwd;
     
     public Voluntario(String nombre, String telefono, String direccion,int idAdoptante) {
         super(nombre, telefono, direccion);
@@ -30,9 +29,7 @@ public class Voluntario extends Persona{
         this.username = username;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
+   
     
     
     

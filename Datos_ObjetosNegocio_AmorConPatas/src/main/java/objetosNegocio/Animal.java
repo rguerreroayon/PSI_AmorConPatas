@@ -18,7 +18,7 @@ public class Animal {
     private String especie;
     private String raza;
     private Calendar fecha;
-    private Voluntario voluntario;
+    private int idVoluntario;
     private String descripcionRescate;
     private ArrayList historialMedico;
     private boolean isAdoptado;
@@ -63,12 +63,12 @@ public class Animal {
         this.fecha = fecha;
     }
 
-    public Voluntario getVoluntario() {
-        return voluntario;
+    public int getIDVoluntario() {
+        return idVoluntario;
     }
 
-    public void setVoluntario(Voluntario voluntario) {
-        this.voluntario = voluntario;
+    public void setIDVoluntario(int idVoluntario) {
+        this.idVoluntario = idVoluntario;
     }
 
     public String getDescripcionRescate() {

@@ -14,10 +14,12 @@ import java.util.Calendar;
 public class EntradaMedica {
     private Calendar fecha;
     private String descripcion;
+    private int idAnimal;
 
-    public EntradaMedica(Calendar fecha, String descripcion) {
+    public EntradaMedica(Calendar fecha, String descripcion,int idAnimal) {
         this.fecha = fecha;
         this.descripcion = descripcion;
+        this.idAnimal = idAnimal;
     }
 
     public Calendar getFecha() {

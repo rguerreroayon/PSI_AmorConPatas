@@ -14,7 +14,6 @@ import objetosNegocio.*;
  */
 public class Pruebas {
     public static void main(String[] args) {
-        ConexionBD bd = new ConexionBD();
         DAOVoluntarios dv = new DAOVoluntarios();
 
         
@@ -30,9 +29,30 @@ public class Pruebas {
         //AnadirVoluntario - Anadir un voluntario
         
         Voluntario voluntario = new Voluntario("Fernando Rodriguez","6444585858","Pruebas desde Netbeans");
+        System.out.println("------------------------------------------------------------------");
+        //dv.queryAnadirVoluntario(voluntario);
+        System.out.println("------------------------------------------------------------------");
+        //System.out.println(dv.queryEditarVoluntario(voluntario,1));
+
+        System.out.println("------------------------------------------------------------------");
+
+        voluntario = dv.queryGetVoluntarioPorID(1);
         
-        dv.anadirVoluntario(voluntario);
-    
+//        System.out.println(voluntario.getNombre());
+//        System.out.println(voluntario.getDireccion());
+//        System.out.println(voluntario.getTelefono());
+//        System.out.println(voluntario.getHorasAcumuladas());
+
+        System.out.println("------------------------------------------------------------------");
+
+        //Get Voluntarios por Nombre
+        
+        ArrayList<Voluntario> v = dv.queryGetVoluntariosPorNombre("e");
+        
+        for (Voluntario voluntario1 : v) {
+            System.out.println(voluntario1.getNombre());
+        }
+        
         
     }
 }

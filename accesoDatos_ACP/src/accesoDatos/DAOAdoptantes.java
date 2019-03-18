@@ -6,6 +6,7 @@
 package accesoDatos;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,13 +15,10 @@ import java.sql.Connection;
 public class DAOAdoptantes implements DAOConexion {
 
     @Override
-    public void transformarQuerySet() {
+    public ArrayList transformarQuerySet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void getConexion(Connection conexion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
     
 }

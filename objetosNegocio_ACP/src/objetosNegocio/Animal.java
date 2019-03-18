@@ -6,7 +6,7 @@
 package objetosNegocio;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -14,15 +14,28 @@ import java.util.Calendar;
  */
 public class Animal {
     private String nombre;
-    private Animal animal;
     private String especie;
     private String raza;
-    private Calendar fecha;
+    private int idAnimal;
+    private GregorianCalendar fecha;
     private int idVoluntario;
     private String descripcionRescate;
     private ArrayList historialMedico;
     private boolean isAdoptado;
 
+    public Animal(String nombre, int idAnimal, String especie, String raza, GregorianCalendar fecha, int idVoluntario, String descripcionRescate, ArrayList historialMedico, boolean isAdoptado) {
+        this.nombre = nombre;
+        this.idAnimal = idAnimal;
+        this.especie = especie;
+        this.raza = raza;
+        this.fecha = fecha;
+        this.idVoluntario = idVoluntario;
+        this.descripcionRescate = descripcionRescate;
+        this.historialMedico = historialMedico;
+        this.isAdoptado = isAdoptado;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }
@@ -31,13 +44,24 @@ public class Animal {
         this.nombre = nombre;
     }
 
-    public Animal getAnimal() {
-        return animal;
+    public int getIdAnimal() {
+        return idAnimal;
     }
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    public void setIdAnimal(int idAnimal) {
+        this.idAnimal = idAnimal;
     }
+
+    public int getIdVoluntario() {
+        return idVoluntario;
+    }
+
+    public void setIdVoluntario(int idVoluntario) {
+        this.idVoluntario = idVoluntario;
+    }
+
+   
+    
 
     public String getEspecie() {
         return especie;
@@ -55,11 +79,11 @@ public class Animal {
         this.raza = raza;
     }
 
-    public Calendar getFecha() {
+    public GregorianCalendar getFecha() {
         return fecha;
     }
 
-    public void setFecha(Calendar fecha) {
+    public void setFecha(GregorianCalendar fecha) {
         this.fecha = fecha;
     }
 

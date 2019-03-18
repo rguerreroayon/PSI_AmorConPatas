@@ -5,6 +5,9 @@
  */
 package accesoDatos;
 
+import java.util.ArrayList;
+import objetosNegocio.*;
+
 /**
  *
  * @author roberto
@@ -13,6 +16,13 @@ public class Pruebas {
     public static void main(String[] args) {
         ConexionBD bd = new ConexionBD();
         
+//        DAOVoluntarios dv = new DAOVoluntarios();
+//        
+//        ArrayList<Voluntario> voluntarios = dv.transformarQuerySet();
+//        
+//        for (Voluntario voluntario : voluntarios) {
+//            System.out.println(voluntario.getNombre());
+//        }
         
         
     }

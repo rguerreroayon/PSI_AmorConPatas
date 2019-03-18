@@ -6,6 +6,7 @@
 package accesoDatos;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,7 +16,6 @@ public interface DAOConexion {
     ConexionBD conexion = new ConexionBD();
 
     
-    public void transformarQuerySet();
+    public ArrayList transformarQuerySet();
     
-    public void getConexion(Connection conexion);
 }

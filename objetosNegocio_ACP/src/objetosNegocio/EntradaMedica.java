@@ -5,28 +5,28 @@
  */
 package objetosNegocio;
 
-import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
  * @author Rob Guerrero
  */
 public class EntradaMedica {
-    private Calendar fecha;
+    private GregorianCalendar fecha;
     private String descripcion;
     private int idAnimal;
 
-    public EntradaMedica(Calendar fecha, String descripcion,int idAnimal) {
+    public EntradaMedica(GregorianCalendar fecha, String descripcion,int idAnimal) {
         this.fecha = fecha;
         this.descripcion = descripcion;
         this.idAnimal = idAnimal;
     }
 
-    public Calendar getFecha() {
+    public GregorianCalendar getFecha() {
         return fecha;
     }
 
-    public void setFecha(Calendar fecha) {
+    public void setFecha(GregorianCalendar fecha) {
         this.fecha = fecha;
     }
 

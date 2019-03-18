@@ -6,23 +6,52 @@
 package accesoDatos;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import objetosNegocio.Adopcion;
 
 /**
  *
  * @author Rob Guerrero
  */
-public class DAOAdopciones implements DAOConexion  {
+public class DAOAdopciones implements DAOConexion {
 
-    
-    
-    @Override
-    public void transformarQuerySet() {
+    private ArrayList<Adopcion> adopciones;
+
+    public DAOAdopciones() {
 
     }
 
     @Override
-    public void getConexion(Connection conexion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Adopcion> transformarQuerySet() {
+        Connection c = ConexionBD.getConection();
+        String query = "SELECT * FROM Adopcion ORDER BY idAdopcion";
+
+        try {
+            PreparedStatement ps = c.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                adopciones.add(new Adopcion(
+                        Integer.valueOf(rs.getString("idAdopcion")),
+                        Integer.valueOf(rs.getString("idAnimal")),
+                        Integer.valueOf(rs.getString("idAdoptante")),
+                        Integer.valueOf(rs.getString("idVoluntario")),
+                        new GregorianCalendar(),
+                        rs.getString("descripcion")
+                ));
+            }
+            return adopciones;
+
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+
+        return null;
     }
+
     
 }

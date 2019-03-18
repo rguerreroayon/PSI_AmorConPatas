@@ -23,19 +23,20 @@ public class ConexionBD {
     public ConexionBD(){
         this.conexion = null;
         try{
-           
+            System.out.println("Making the Connection");
             Class.forName(driver);
             conexion = DriverManager.getConnection(
                     bd,
                     user,
                     password);
+            System.out.println("Verifying");
             if(conexion!= null) System.out.println("Conexion Exitosa");
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
     }
     
-    public static Connection getConecction(){
+    public static Connection getConection(){
         ConexionBD c = new ConexionBD();
         return c.getConexion();
         

@@ -6,21 +6,48 @@
 package accesoDatos;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import objetosNegocio.Voluntario;
 
 /**
  *
  * @author Rob Guerrero
  */
 public class DAOVoluntarios implements DAOConexion {
-
+    ArrayList<Voluntario> voluntarios;
+    
     @Override
-    public void transformarQuerySet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList transformarQuerySet() {
+        Connection c = ConexionBD.getConection();
+        String query = "SELECT * "
+                + "FROM Voluntario";
+        
+        try {
+            PreparedStatement ps = c.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()){
+                voluntarios.add(
+                        new Voluntario(
+                            rs.getString("nombre"),
+                            rs.getString("telefono"),
+                            rs.getString("direccion"),
+                            Integer.valueOf(rs.getString("idVoluntario")))
+                );
+            }
+           
+            return voluntarios;
+
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+        
+        return null;
     }
 
-    @Override
-    public void getConexion(Connection conexion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
 }

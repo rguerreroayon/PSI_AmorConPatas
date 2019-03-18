@@ -17,7 +17,7 @@ public class ConexionBD {
     private final String driver = "com.mysql.cj.jdbc.Driver";
     private final String user = "ACP";
     private final String password = "AmorConPatas";
-    private final String bd = "jdbc:mysql://rguerrero.ddns.net:3306/AmorConPatas";
+    private final String bd = "jdbc:mysql://rguerrero.ddns.net:3306/AmorConPatas?serverTimezone=UTC";
     
     
     public ConexionBD(){

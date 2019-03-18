@@ -28,6 +28,8 @@ public class DAOVoluntarios implements DAOConexion {
         try {
             PreparedStatement ps = c.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
+            
+            voluntarios = new ArrayList<>();
 
             while(rs.next()){
                 voluntarios.add(
@@ -47,7 +49,24 @@ public class DAOVoluntarios implements DAOConexion {
         
         return null;
     }
-
+    
+    public int anadirVoluntario(Voluntario voluntario){
+        Connection c = ConexionBD.getConection();
+        String query = "INSERT INTO Voluntario (nombre,direccion,telefono) "
+                + "VALUES ("+voluntario.getNombre()+","+voluntario.getDireccion()+","+voluntario.getTelefono()+")";
+        
+        try {
+            PreparedStatement ps = c.prepareStatement(query);
+            
+            
+            return ps.executeUpdate();
+            
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+        
+        return -1;
+    }
     
     
 }

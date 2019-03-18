@@ -15,15 +15,24 @@ import objetosNegocio.*;
 public class Pruebas {
     public static void main(String[] args) {
         ConexionBD bd = new ConexionBD();
+        DAOVoluntarios dv = new DAOVoluntarios();
+
         
-//        DAOVoluntarios dv = new DAOVoluntarios();
-//        
-//        ArrayList<Voluntario> voluntarios = dv.transformarQuerySet();
-//        
-//        for (Voluntario voluntario : voluntarios) {
-//            System.out.println(voluntario.getNombre());
-//        }
         
+        //TransformarQuerySet - Recuperar todos los voluntarios
+        //        
+        //        ArrayList<Voluntario> voluntarios = dv.transformarQuerySet();
+        //        
+        //        for (Voluntario voluntario : voluntarios) {
+        //            System.out.println(voluntario.getNombre());
+        //        }
+        
+        //AnadirVoluntario - Anadir un voluntario
+        
+        Voluntario voluntario = new Voluntario("Fernando Rodriguez","6444585858","Pruebas desde Netbeans");
+        
+        dv.anadirVoluntario(voluntario);
+    
         
     }
 }

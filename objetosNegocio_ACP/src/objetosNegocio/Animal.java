@@ -21,9 +21,9 @@ public class Animal {
     private int idVoluntario;
     private String descripcionRescate;
     private ArrayList historialMedico;
-    private boolean isAdoptado;
+    private int isAdoptado;
 
-    public Animal(String nombre, int idAnimal, String especie, String raza, GregorianCalendar fecha, int idVoluntario, String descripcionRescate, ArrayList historialMedico, boolean isAdoptado) {
+    public Animal(String nombre, int idAnimal, String especie, String raza, GregorianCalendar fecha, int idVoluntario, String descripcionRescate, ArrayList historialMedico, int isAdoptado) {
         this.nombre = nombre;
         this.idAnimal = idAnimal;
         this.especie = especie;
@@ -111,13 +111,10 @@ public class Animal {
         this.historialMedico = historialMedico;
     }
 
-    public boolean isIsAdoptado() {
+    public int getIsAdoptado() {
         return isAdoptado;
     }
 
-    public void setIsAdoptado(boolean isAdoptado) {
-        this.isAdoptado = isAdoptado;
-    }
     
     
     

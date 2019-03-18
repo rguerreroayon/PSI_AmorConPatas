@@ -14,7 +14,12 @@ public class Voluntario extends Persona {
     private int idVoluntario;
     private String username;
     private int horasAcumuladas = 0;
+    private int isAdmin = 0;
 
+    public Voluntario(String nombre, String telefono, String direccion) {
+        super(nombre, telefono, direccion);
+    }
+    
     public Voluntario(String nombre, String telefono, String direccion, int idVoluntario) {
         super(nombre, telefono, direccion);
         this.idVoluntario = idVoluntario;
@@ -48,6 +53,14 @@ public class Voluntario extends Persona {
 
     public void setIdVoluntario(int idVoluntario) {
         this.idVoluntario = idVoluntario;
+    }
+
+    public int getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(int isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     @Override

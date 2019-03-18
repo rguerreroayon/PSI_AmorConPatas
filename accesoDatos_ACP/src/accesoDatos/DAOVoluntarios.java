@@ -69,10 +69,10 @@ public class DAOVoluntarios implements DAOConexion {
         return -1;
     }
 
-    public int queryEliminarVoluntario(int idVoluntario){
+    public int queryEliminarVoluntario(int idVoluntario) {
         Connection c = ConexionBD.getConection();
-        String query = "DELETE FROM Voluntario WHERE idVoluntario="+String.valueOf(idVoluntario);
-             
+        String query = "DELETE FROM Voluntario WHERE idVoluntario=" + String.valueOf(idVoluntario);
+
         try {
 
             PreparedStatement ps = c.prepareStatement(query);
@@ -85,13 +85,12 @@ public class DAOVoluntarios implements DAOConexion {
 
         return -1;
     }
-    
-    public int queryEditarVoluntario(Voluntario voluntario,int idVoluntarioEdicion){
+
+    public int queryEditarVoluntario(Voluntario voluntario, int idVoluntarioEdicion) {
         Connection c = ConexionBD.getConection();
         String query = "UPDATE Voluntario "
-                + "SET nombre ='"+voluntario.getNombre()+"', direccion='"+voluntario.getDireccion()+"', telefono='"+voluntario.getTelefono()+"' "
-                + "WHERE idVoluntario ="+idVoluntarioEdicion;
-
+                + "SET nombre ='" + voluntario.getNombre() + "', direccion='" + voluntario.getDireccion() + "', telefono='" + voluntario.getTelefono() + "' "
+                + "WHERE idVoluntario =" + idVoluntarioEdicion;
 
         try {
 
@@ -105,26 +104,26 @@ public class DAOVoluntarios implements DAOConexion {
 
         return -1;
     }
-    
-    public Voluntario queryGetVoluntarioPorID(int idVoluntario){
+
+    public Voluntario queryGetVoluntarioPorID(int idVoluntario) {
         Connection c = ConexionBD.getConection();
-        String query = "SELECT * FROM Voluntario WHERE idVoluntario="+idVoluntario;
-        
+        String query = "SELECT * FROM Voluntario WHERE idVoluntario=" + idVoluntario;
+
         try {
 
             PreparedStatement ps = c.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             Voluntario voluntario = null;
-            
-            while(rs.next()){
+
+            while (rs.next()) {
                 voluntario = new Voluntario(rs.getString("nombre"),
-                       rs.getString("telefono"),
-                       rs.getString("direccion"),
-                       Integer.valueOf(rs.getString("idVoluntario")),
-                       Integer.valueOf(rs.getString("horasAcumuladas"))
-                               );
+                        rs.getString("telefono"),
+                        rs.getString("direccion"),
+                        Integer.valueOf(rs.getString("idVoluntario")),
+                        Integer.valueOf(rs.getString("horasAcumuladas"))
+                );
             }
-            
+
             return voluntario;
 
         } catch (SQLException exception) {
@@ -132,20 +131,38 @@ public class DAOVoluntarios implements DAOConexion {
         }
 
         return null;
-        
-        
+
     }
-   
-    public ArrayList<Voluntario> queryGetVoluntariosPorNombre(String nombre){
+
+    public ArrayList<Voluntario> queryGetVoluntariosPorNombre(String nombre) {
         voluntarios = transformarQuerySet();
         ArrayList<Voluntario> respond = new ArrayList();
-        
+
         voluntarios.stream().filter((voluntario) -> (voluntario.getNombre().contains(nombre))).forEachOrdered((voluntario) -> {
             respond.add(voluntario);
         });
-        
+
         return respond;
     }
-    
-    
+
+    public void queryAnadirHorasVoluntarios(ArrayList<Voluntario> voluntarios, int numeroHoras) {
+        Connection c = ConexionBD.getConection();
+
+        for (Voluntario voluntario : voluntarios) {
+            String query = "UPDATE Voluntario "
+                    + "SET horasAcumuladas=" + numeroHoras + " "
+                    + "WHERE idVoluntario=" + voluntario.getIdVoluntario();
+            try {
+                PreparedStatement ps = c.prepareStatement(query);
+                ps.executeUpdate();
+                
+                
+            } catch (SQLException exception) {
+                System.out.println("Oops, algo salio mal");
+            }
+
+        }
+
+
+    }
 }

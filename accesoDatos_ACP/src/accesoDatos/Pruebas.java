@@ -28,7 +28,7 @@ public class Pruebas {
         
         //AnadirVoluntario - Anadir un voluntario
         
-        Voluntario voluntario = new Voluntario("Fernando Rodriguez","6444585858","Pruebas desde Netbeans");
+        //Voluntario voluntario = new Voluntario("Fernando Rodriguez","6444585858","Pruebas desde Netbeans");
         System.out.println("------------------------------------------------------------------");
         //dv.queryAnadirVoluntario(voluntario);
         System.out.println("------------------------------------------------------------------");
@@ -36,7 +36,8 @@ public class Pruebas {
 
         System.out.println("------------------------------------------------------------------");
 
-        voluntario = dv.queryGetVoluntarioPorID(1);
+        Voluntario voluntario = dv.queryGetVoluntarioPorID(1);
+        Voluntario voluntario2 = dv.queryGetVoluntarioPorID(2);
         
 //        System.out.println(voluntario.getNombre());
 //        System.out.println(voluntario.getDireccion());
@@ -47,12 +48,19 @@ public class Pruebas {
 
         //Get Voluntarios por Nombre
         
-        ArrayList<Voluntario> v = dv.queryGetVoluntariosPorNombre("e");
+//        ArrayList<Voluntario> v = dv.queryGetVoluntariosPorNombre("e");
+//        
+//        for (Voluntario voluntario1 : v) {
+//            System.out.println(voluntario1.getNombre());
+//        }
         
-        for (Voluntario voluntario1 : v) {
-            System.out.println(voluntario1.getNombre());
-        }
+        //AgregarHorasPorVoluntarios
         
+        ArrayList<Voluntario> v2 = new ArrayList();
+        v2.add(voluntario);
+        v2.add(voluntario2);
+        
+        dv.queryAnadirHorasVoluntarios(v2, 2);
         
     }
 }

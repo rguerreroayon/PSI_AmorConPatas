@@ -12,6 +12,7 @@ import java.util.GregorianCalendar;
  * @author Rob Guerrero
  */
 public class Adopcion {
+
     private int idAdopcion;
     private int idAnimal;
     private int idAdoptante;
@@ -21,6 +22,14 @@ public class Adopcion {
 
     public Adopcion(int idAdopcion, int idAnimal, int idAdoptante, int idVoluntario, GregorianCalendar fecha, String descripcion) {
         this.idAdopcion = idAdopcion;
+        this.idAnimal = idAnimal;
+        this.idAdoptante = idAdoptante;
+        this.idVoluntario = idVoluntario;
+        this.fecha = fecha;
+        this.descripcion = descripcion;
+    }
+
+    public Adopcion(int idAnimal, int idAdoptante, int idVoluntario, GregorianCalendar fecha, String descripcion) {
         this.idAnimal = idAnimal;
         this.idAdoptante = idAdoptante;
         this.idVoluntario = idVoluntario;
@@ -75,8 +84,5 @@ public class Adopcion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
-    
-    
-    
+
 }

@@ -9,13 +9,17 @@ package objetosNegocio;
  *
  * @author Rob Guerrero
  */
-public class Adoptante extends Persona{
-    
+public class Adoptante extends Persona {
+
     private int idAdoptante;
-    
-    public Adoptante(String nombre, String telefono, String direccion,int idAdoptante) {
+
+    public Adoptante(String nombre, String telefono, String direccion, int idAdoptante) {
         super(nombre, telefono, direccion);
         this.idAdoptante = idAdoptante;
+    }
+
+    public Adoptante(String nombre, String telefono, String direccion) {
+        super(nombre, telefono, direccion);
     }
 
     public int getIdAdoptante() {
@@ -47,6 +51,5 @@ public class Adoptante extends Persona{
     public void setIdAdoptante(int idAdoptante) {
         this.idAdoptante = idAdoptante;
     }
-    
-    
+
 }

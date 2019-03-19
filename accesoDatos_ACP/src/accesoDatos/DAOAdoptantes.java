@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import objetosNegocio.Adoptante;
-import objetosNegocio.Voluntario;
 
 /**
  *
@@ -20,7 +19,7 @@ import objetosNegocio.Voluntario;
 public class DAOAdoptantes implements DAOConexion {
 
     @Override
-    public ArrayList transformarQuerySet() {
+    public ArrayList<Adoptante> transformarQuerySet() {
         Connection c = ConexionBD.getConection();
         String query = "SELECT * "
                 + "FROM Adoptante";
@@ -50,6 +49,79 @@ public class DAOAdoptantes implements DAOConexion {
         return null;
     }
 
-  
+    public int queryAnadirAdoptante(Adoptante adoptante){
+        Connection c = ConexionBD.getConection();
+        String query = "INSERT INTO Adoptante(nombreAdoptante,direccion,telefono) "
+                + "VALUES ('" + adoptante.getNombre() + "','" + adoptante.getDireccion() + "','" + adoptante.getTelefono() + "')";
+
+        try {
+
+            PreparedStatement ps = c.prepareStatement(query);
+
+            return ps.executeUpdate();
+
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+
+        return -1;
+    }
     
+    public int queryEditarAdoptante(Adoptante adoptante,int idAdoptante){
+        Connection c = ConexionBD.getConection();
+        String query = "UPDATE Adoptante "
+                + "SET nombreAdoptante='"+adoptante.getNombre()+"',telefono='"+adoptante.getTelefono()+"',direccion='"+adoptante.getDireccion()+"' WHERE idAdoptante="+idAdoptante;
+        try {
+
+            PreparedStatement ps = c.prepareStatement(query);
+            return ps.executeUpdate();
+
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+
+        return -1;
+    }
+    
+    public int queryEliminarAdoptante(int idAdoptante){
+        Connection c = ConexionBD.getConection();
+        String query = "DELETE FROM Adopante WHERE idAdoptante=" + String.valueOf(idAdoptante);
+
+        try {
+
+            PreparedStatement ps = c.prepareStatement(query);
+
+            return ps.executeUpdate();
+
+        } catch (SQLException exception) {
+            System.out.println("Oops, algo salio mal");
+        }
+
+        return -1;
+    }
+    
+    public Adoptante queryGetAdoptantePorID(int idAdoptante){
+       ArrayList<Adoptante> adoptantes = transformarQuerySet();
+       
+        for (Adoptante adoptante : adoptantes) {
+            if(adoptante.getIdAdoptante() == idAdoptante){
+                return adoptante;
+            }
+        }
+        
+        return null;
+       
+    }
+  
+    public ArrayList<Adoptante> queryGetAdoptantesPorNombre(String nombre){
+        ArrayList<Adoptante> adoptantes = transformarQuerySet();
+        ArrayList<Adoptante> porN = new ArrayList();
+        for (Adoptante adoptante : adoptantes) {
+            if(adoptante.getNombre().contains(nombre)){
+                porN.add(adoptante);
+            }
+        }
+        
+        return porN;
+    }
 }

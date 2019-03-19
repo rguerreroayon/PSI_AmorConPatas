@@ -23,7 +23,7 @@
         
         <div class = "row">
             <div class = "logo">
-            <img src="resources/amorConPatasHD.jpg">
+                <img src="resources/amorConPatasHD.jpg" width="200" height="150">
             </div>
         <ul class="main-nav">
             <li class="active"><a href="">Menú Principal</a></li>

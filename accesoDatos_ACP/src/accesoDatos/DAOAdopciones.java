@@ -10,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import objetosNegocio.Adopcion;
 
 /**
@@ -40,7 +39,7 @@ public class DAOAdopciones implements DAOConexion {
                         Integer.valueOf(rs.getString("idAnimal")),
                         Integer.valueOf(rs.getString("idAdoptante")),
                         Integer.valueOf(rs.getString("idVoluntario")),
-                        new GregorianCalendar(),
+                        Utilidades.convertirFecha(rs.getString("fecha")),
                         rs.getString("descripcion")
                 ));
             }

@@ -5,7 +5,9 @@
  */
 package accesoDatos;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import objetosNegocio.*;
 
 /**
@@ -13,8 +15,24 @@ import objetosNegocio.*;
  * @author roberto
  */
 public class Pruebas {
-    public static void main(String[] args) {
-        DAOVoluntarios dv = new DAOVoluntarios();
+    public static void main(String[] args) throws ParseException {
+        
+        
+        
+     //pruebasDAOAdoptantes();
+        
+     pruebasDAOAnimales();
+     
+     
+    
+            
+
+        
+    }
+    
+    
+    public static void pruebasDAOVoluntarios(){
+           DAOVoluntarios dv = new DAOVoluntarios();
 
         
         
@@ -61,6 +79,26 @@ public class Pruebas {
         v2.add(voluntario2);
         
         dv.queryAnadirHorasVoluntarios(v2, 2);
+    }
+    
+    public static void pruebasDAOAnimales(){
+        
+        DAOAnimales a = new DAOAnimales();
+        
+        Animal animal = new Animal("Hercules","Perro","Cocker", Utilidades.convertirFecha_StringToGregorian("2019-03-25"), 1,"Netbeans testing edicion :D", 0);
+        
+        a.queryEditarAnimal(animal,3);
         
     }
+      
+    public static void pruebasDAOAdoptantes(){
+        DAOAdoptantes da = new DAOAdoptantes();
+        
+       
+        
+    }
+          
+
+    
+    
 }

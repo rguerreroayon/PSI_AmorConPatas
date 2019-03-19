@@ -13,6 +13,7 @@ import java.util.GregorianCalendar;
  * @author Rob Guerrero
  */
 public class Animal {
+
     private String nombre;
     private String especie;
     private String raza;
@@ -35,7 +36,16 @@ public class Animal {
         this.isAdoptado = isAdoptado;
     }
 
-    
+    public Animal(String nombre,String especie, String raza, GregorianCalendar fecha, int idVoluntario, String descripcionRescate,int isAdoptado) {
+        this.nombre = nombre;
+        this.especie = especie;
+        this.raza = raza;
+        this.fecha = fecha;
+        this.idVoluntario = idVoluntario;
+        this.descripcionRescate = descripcionRescate;
+        this.isAdoptado = isAdoptado;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -60,8 +70,9 @@ public class Animal {
         this.idVoluntario = idVoluntario;
     }
 
-   
-    
+    public void setIsAdoptado(int isAdoptado) {
+        this.isAdoptado = isAdoptado;
+    }
 
     public String getEspecie() {
         return especie;
@@ -115,8 +126,4 @@ public class Animal {
         return isAdoptado;
     }
 
-    
-    
-    
-    
 }

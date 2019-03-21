@@ -1,5 +1,5 @@
 <%--
-    Document   : JSP_adminPage
+    Document   : JSP_adopcionPage
     Created on : 21/03/2019, 12:24:04 AM
     Author     : Juan Enrique Solis Perla
 --%>

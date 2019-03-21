@@ -9,35 +9,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Fundación Amor con Patas</title>
+        <link href="styles/styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <header>
+            <div class = "row">
+                <div>
+                    <img src="resources/ACP_PNG.png" width="180" height="180">
+                </div>
 
 
-
-
-            
-        </header>
-        
-        
-        <div class = "row">
-            <div class = "logo">
-                <img src="resources/amorConPatasHD.jpg" width="200" height="150">
+                <ul class="main-nav">
+                    <li class="active"><a href="">MENÚ PRINCIPAL</a></li>
+                    <li><a href="">ADOPCIONES</a></li>
+                    <li><a href="">ANIMALES</a></li>
+                    <li><a href="">ADOPTANTES</a></li>
+                    <li><a href="">VOLUNTARIADOS</a></li>
+                    <li><a href="">CONFIGURACIÓN</a></li>
+                </ul>
             </div>
-        <ul class="main-nav">
-            <li class="active"><a href="">Menú Principal</a></li>
-            <li><a href="">Adopciones</a></li>
-            <li><a href="">Animales</a></li>
-            <li><a href="">Adoptantes</a></li>
-            <li><a href="">Voluntariado</a></li>
-            <li><a href="">Configuración</a></li>
-        </ul>
-
-        </div>
-
-        </div>    
-    
+        </header>
 
 
     </body>

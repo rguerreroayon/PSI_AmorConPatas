@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/03/2019, 06:21:24 AM
+    Author     : roberto
+*/
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+
+
+
+.main-nav{
+    float:right;
+    list-style: none;
+    margin-top:30px;
+}
+
+.main-nav li{
+    display: inline-block;
+}
+
+.main-nav li a{
+    color:white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.main-nav li.active a{
+    border: 1px solid white;
+
+}
+
+.main-nav li a:hover{
+    border: 1px solid white;
+
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+    float: left;
+}
+
+body{
+    font-family: monospace;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../resources/dog.jpg);
+}
+
+.row{
+    max-width: 1200px;
+    margin:auto;
+}

@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import accesoDatos.DAOVoluntarios;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ServletVoluntarios", urlPatterns = {"/ServletVoluntarios"})
 public class ServletVoluntarios extends HttpServlet {
-
+    DAOVoluntarios voluntarios = new DAOVoluntarios();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.

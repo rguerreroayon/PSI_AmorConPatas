@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import accesoDatos.DAOAdopciones;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ServletAdopciones", urlPatterns = {"/ServletAdopciones"})
 public class ServletAdopciones extends HttpServlet {
+DAOAdopciones adopciones = new DAOAdopciones();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

@@ -9,6 +9,7 @@ import accesoDatos.DAOAnimales;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,9 +36,13 @@ public class ServletAnimales extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-      
+        RequestDispatcher rd;
+        
+        
         nombreAnimal = request.getParameter("campoNombreAnimal");
+        rd = request.getRequestDispatcher("JSP_adopcionPage.jsp");
+
+        rd.forward(request, response);
         
     }
     

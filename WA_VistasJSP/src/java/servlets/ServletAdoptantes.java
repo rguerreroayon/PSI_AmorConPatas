@@ -8,6 +8,7 @@ package servlets;
 import accesoDatos.DAOAdoptantes;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,7 +26,6 @@ import objetosNegocio.Adoptante;
 public class ServletAdoptantes extends HttpServlet {
 
     DAOAdoptantes adoptantes = new DAOAdoptantes();
-    String nombreAdoptante = "";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,8 +40,7 @@ public class ServletAdoptantes extends HttpServlet {
             throws ServletException, IOException {
 
         RequestDispatcher rd;
-
-        nombreAdoptante = request.getParameter("campoNombreAdoptante");
+        obtenerAdoptantesNombre(request.getParameter("nombreCampoAdoptante"));
 
         rd = request.getRequestDispatcher("JSP_adopcionPage.jsp");
 
@@ -88,9 +87,21 @@ public class ServletAdoptantes extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    public ArrayList<Adoptante> obtenerAdoptantesNombre() {
+    public void obtenerAdoptantesNombre(String nombre) {
 
-        return adoptantes.queryGetAdoptantesPorNombre(nombreAdoptante);
+        try {
+            ArrayList<Adoptante> ad = adoptantes.queryGetAdoptantesPorNombre(nombre);
+            
+            out.println("<select name='adoptanteSelect'>");
+            for (Adoptante adoptante : ad) {
+                out.println("<option name='idAdoptante' value='" + String.valueOf(adoptante.getIdAdoptante()) + "'>" + adoptante.getIdAdoptante() + " - " + adoptante.getNombre() + "</option>");
+            }   
+            out.println("</select>");
+
+        } catch (Exception e) {
+            out.println("U DID SOMETHING NASTY!");
+        }
+
     }
 
 }

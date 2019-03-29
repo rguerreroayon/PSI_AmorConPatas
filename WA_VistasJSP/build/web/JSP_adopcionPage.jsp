@@ -131,53 +131,53 @@
 
                     <div class="twelve wide column" style="background-color: lightgray;">
                         <div class="ui container">
-                            <form action ="ServletAdopciones">
 
 
-                                <form action="ServletAnimales">
-                                    <p>Nombre nuevo del animal: </p><input type="text" id="campoNombreAnimalNuevo" name="campoNombreAnimalNuevo"> 
-                                     <p>Nombre de animal a buscar: </p><input type="text" id="campoNombreAnimalBuscar" name="campoNombreAnimalBuscar"> 
-                                    <input type="submit" id="btnBuscarAnimal" name="btnBuscarAnimal">
-                                    <p>Seleccionar animal: </p>
-                                    <select name="animalSelect">
-                                        <%                                        try {
-                                                ArrayList<Animal> animales = servletAnimales.obtenerAnimalesRescatadosPorNombre();
+                            <form action="ServletAnimales"> 
+                                <p>Nombre nuevo del animal: </p><input type="text" id="campoNombreAnimalNuevo" name="campoNombreAnimalNuevo"> 
+                                <p>Nombre de animal a buscar: </p><input type="text" id="campoNombreAnimalBuscar" name="campoNombreAnimalBuscar"> 
+                                <input type="submit" id="btnBuscarAnimal" name="btnBuscarAnimal">
+                                <p>Seleccionar animal: </p>
+                                <select name="animalSelect">
+                                    <%                                        try {
+                                            ArrayList<Animal> animales = servletAnimales.obtenerAnimalesRescatadosPorNombre();
 
-                                                for (Animal animal : animales) {
-                                                    out.println("<option name='idAnimal' value='" + String.valueOf(animal.getIdAnimal()) + "'>" + animal.getIdAnimal() + " - " + animal.getNombre() + "</option>");
-                                                }
-
-                                            } catch (Exception e) {
-                                                out.println("U DID SOMETHING NASTY!");
+                                            for (Animal animal : animales) {
+                                                out.println("<option name='idAnimal' value='" + String.valueOf(animal.getIdAnimal()) + "'>" + animal.getIdAnimal() + " - " + animal.getNombre() + "</option>");
                                             }
 
-
-                                        %>                        
-                                    </select>
-                                </form>
-
-                                <form action="ServletAdoptantes"> 
-                                    <p>Nombre del adoptante </p><input type="text" id="campoNombreAdoptante" name="campoNombreAdoptante"> 
-                                    <input type="submit" id="btnBuscarAdoptante" name="btnBuscarAdoptante">
-                                    <p>Seleccionar adoptante: </p>
-                                    <select name="adoptanteSelect">
-                                        <%                                        try {
-                                                ArrayList<Adoptante> adoptantes = servletAdoptantes.obtenerAdoptantesNombre();
-
-                                                for (Adoptante adoptante : adoptantes) {
-                                                    out.println("<option name='idAdoptante' value='" + String.valueOf(adoptante.getIdAdoptante()) + "'>" + adoptante.getIdAdoptante() + " - " + adoptante.getNombre() + "</option>");
-                                                }
-
-                                            } catch (Exception e) {
-                                                out.println("U DID SOMETHING NASTY!");
-                                            }
+                                        } catch (Exception e) {
+                                            out.println("U DID SOMETHING NASTY!");
+                                        }
 
 
-                                        %>                        
-                                    </select>
-                                </form>
-
+                                    %>                        
+                                </select>
                             </form>
+
+
+                            <form action="ServletAdoptantes"> 
+                                <p>Nombre del adoptante </p><input type="text" id="campoNombreAdoptante" name="campoNombreAdoptante"> 
+                                <input type="submit" id="btnBuscarAdoptante" name="btnBuscarAdoptante">
+                                <p>Seleccionar adoptante: </p>
+                                <select name="adoptanteSelect">
+                                    <%                                        try {
+                                            ArrayList<Adoptante> adoptantes = servletAdoptantes.obtenerAdoptantesNombre();
+
+                                            for (Adoptante adoptante : adoptantes) {
+                                                out.println("<option name='idAdoptante' value='" + String.valueOf(adoptante.getIdAdoptante()) + "'>" + adoptante.getIdAdoptante() + " - " + adoptante.getNombre() + "</option>");
+                                            }
+
+                                        } catch (Exception e) {
+                                            out.println("U DID SOMETHING NASTY!");
+                                        }
+
+
+                                    %>                        
+                                </select>
+                            </form>
+
+
 
 
                         </div>

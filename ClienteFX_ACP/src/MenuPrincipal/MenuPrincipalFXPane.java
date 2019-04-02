@@ -27,7 +27,7 @@ public class MenuPrincipalFXPane extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
-    
+        
     @FXML
     private void initialize() {
     }

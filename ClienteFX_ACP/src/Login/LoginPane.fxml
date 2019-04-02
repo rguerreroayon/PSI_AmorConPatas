@@ -39,5 +39,20 @@ and open the template in the editor.
             </ImageView>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="14.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/facebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="73.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/whatsapp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="129.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/instagram.png" />
+         </image>
+      </ImageView>
    </children>
 </fx:root>

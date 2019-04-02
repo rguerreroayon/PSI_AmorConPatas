@@ -2,28 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caae6e3b-b325-44fe-aba2-e13a0575afab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentos/ModeloArq.uml" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentos/ModeloArq.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentos/ModeloArq.~ml" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentos/ModeloArq.~ml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOAdopciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/DAOAdopciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOAdoptantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/DAOAdoptantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOAnimalesAdoptados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/DAOAnimales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOAnimalesRescatados.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOConexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/DAOConexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/DAOVoluntarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/DAOVoluntarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accesoDatos/Pruebas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accesoDatos/Pruebas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adopcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adopcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adoptante.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adoptante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/EntradaMedica.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/EntradaMedica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Voluntario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Voluntario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servletsNegocio_ACP/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../servletsNegocio_ACP/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Arquitectura del Proyecto/ModeloArq.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Arquitectura del Proyecto/ModeloArq.~ml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Arquitectura del Proyecto/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Bosquejos_AmorConPatas/Login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Bosquejos_AmorConPatas/Registrar Adopción.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Bosquejos_AmorConPatas/Registrar rescate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Bosquejos_AmorConPatas/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Diagrama de secuencia.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Diagramas/Copia de Diagrama de secuencia.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Diagramas/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Documento Visión/Documento Visión - Amor con Patas Correción 1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Documento Visión/Documento Visión - Amor con Patas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Documento Visión/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Estatutos del Proyecto/Estatutos del Proyecto.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Estatutos del Proyecto/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Lista de Riesgos/Lista de Riesgos.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Lista de Riesgos/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Amor con Patas PDS 2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/CU Priorizado versión 1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso - Amor con Patas - Corrección 1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso - Amor con Patas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso - Corrección 1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso - Corrección 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/Modelado de Casos de Uso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Modelado de Casos de Uso/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/PDS/Amor con Patas PDS(1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/PDS/Amor con Patas PDS.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/PDS/Amor con Patas PDS.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/PDS/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Plan de Pruebas/Calendario Plan de Pruebas - Amor con Patas.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Plan de Pruebas/Plan de Casos de Prueba - Fundación Amor con Patas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Plan de Pruebas/Plan de Pruebas - Fundación Amor con Patas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Plan de Pruebas/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Planes de Iteración/Plan de Iteración E1 Correción 1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Planes de Iteración/Plan de Iteración E1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Planes de Iteración/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Presentación de la propuesta/Amor con Patas - Propuesta.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Presentación de la propuesta/Presentación Amor con Patas.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Presentación de la propuesta/RUP Diagrama.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Presentación de la propuesta/RUP Diagrama.vsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Presentación de la propuesta/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Project Files/Proyecto - Fundación Amor con Patas.mpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Project Files/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 1 _ 21_02_2019 a 28_02_2019.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 2 _ 28_02_2019 a 06_03_2019.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 3 _ 07_03_2019 a 14_03_2019.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 4 _ 15_03_2019 a 22_03_2019 (1).docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 4 _ 15_03_2019 a 22_03_2019 (1).gdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/Reporte de Avance Semanal - Semana 5 _ 23_03_2019 a 29_03_2019.gdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Reportes de Avance Semanal/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Storyboard/STORYBOARD V1.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/Storyboard/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentos/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/empty/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/generated-sources/ap-source-output/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/generated-sources/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/JSP_adopcionPage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/JSP_anadirAdopcion.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/META-INF/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/servlets/ServletAdopciones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/servlets/ServletAdoptantes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/servlets/ServletAnimales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/servlets/ServletVoluntarios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/classes/servlets/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/glassfish-web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/lib/accesoDatos_ACP.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/lib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/WEB-INF/lib/objetosNegocio_ACP.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/gfv3ee6.dpf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/resources/ACP_PNG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/resources/amorConPatas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/resources/amorConPatasHD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/resources/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/resources/dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/styles/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/build/web/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/ant-deploy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/private/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/conf/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/conf/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/servlets/ServletAdopciones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/servlets/ServletAdoptantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/servlets/ServletAnimales.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/servlets/ServletVoluntarios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/src/java/servlets/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/test/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/JSP_adopcionPage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/JSP_anadirAdopcion.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/WEB-INF/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/WEB-INF/glassfish-web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/resources/ACP_PNG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/resources/amorConPatas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/resources/amorConPatasHD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/resources/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/resources/dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/styles/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WA_VistasJSP/web/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/ConexionBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/ConexionBD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAdopciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAdopciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAdoptantes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAdoptantes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAnimales.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/DAOAnimales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/DAOVoluntarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/DAOVoluntarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/accesoDatos/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/accesoDatos/Utilidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Adoptante.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Adoptante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Voluntario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Voluntario.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +138,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accesoDatos/Utilidades.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="323">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#523#0" expanded="true" />
               </folding>
@@ -48,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accesoDatos/DAOAdopciones.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
+            <state>
               <folding>
                 <element signature="e#0#1776#0" expanded="true" />
               </folding>
@@ -81,7 +187,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accesoDatos/DAOAnimales.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="629">
+              <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
                 <element signature="e#0#2630#0" expanded="true" />
               </folding>
@@ -92,8 +199,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accesoDatos/Pruebas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="136">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding>
                 <element signature="e#0#692#0" expanded="true" />
               </folding>
@@ -118,6 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,8 +249,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,28 +282,23 @@
       <option name="presentableId" value="Default" />
       <updated>1552867863714</updated>
       <workItem from="1552867866960" duration="131000" />
+      <workItem from="1554184773300" duration="666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131000" />
+    <option name="totallyTimeSpent" value="797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -204,44 +306,30 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/accesoDatos/Pruebas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#692#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accesoDatos/Utilidades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#523#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/accesoDatos/DAOAdopciones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
+        <state>
           <folding>
             <element signature="e#0#1776#0" expanded="true" />
           </folding>
@@ -266,9 +354,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/accesoDatos/Pruebas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accesoDatos/Utilidades.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/accesoDatos/DAOAnimales.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="629">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="e#0#2630#0" expanded="true" />
           </folding>

@@ -17,7 +17,7 @@ import javafx.scene.layout.AnchorPane;
 public class MenuPrincipalFXPane extends AnchorPane {
     
     public MenuPrincipalFXPane() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MenuPrincipalFXPane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AdopcionFX.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         

@@ -11,16 +11,16 @@ and open the template in the editor.
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import Controles.ControlesVistasFX.ControlVistaAdopcion?>
+<?import Vista.MenuPrincipal.*?>
 
-<fx:root id="AnchorPane" prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: #FFF0BA;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="Controles.ControlesVistasFX.ControlVistaAdopcion">
+<fx:root id="AnchorPane" prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: #FFF0BA;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="Controles.ControlesVistasFX.ControlVistaAdopcion">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="279.0" style="-fx-background-color: white;">
             <effect>
@@ -34,7 +34,7 @@ and open the template in the editor.
                     <children>
                         <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="16.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/Icons/whatsapp.png" />
+                                <Image url="@../../Resources/Icons/whatsapp.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -46,32 +46,32 @@ and open the template in the editor.
                 <JFXButton id="botonOpcionesAdministrador" layoutY="408.0" prefHeight="38.0" prefWidth="312.0" text="Opciones de Administrador" />
                 <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="18.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/list.png" />
+                        <Image url="@../../Resources/Icons/list.png" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="18.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/dog-house.png" />
+                        <Image url="@../../Resources/Icons/dog-house.png" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="18.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/example.png" />
+                        <Image url="@../../Resources/Icons/volunteer.png" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="18.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/volunteer.png" />
+                        <Image url="@../../Resources/Icons/example.png" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="18.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/settings.png" />
+                        <Image url="@../../Resources/Icons/settings.png" />
                     </image>
                 </ImageView>
                 <ImageView id="fotoUsuario" fitHeight="118.0" fitWidth="119.0" layoutX="128.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/boy.png" />
+                        <Image url="@../../Resources/Icons/boy.png" />
                     </image>
                 </ImageView>
                 <Label id="labelBienvenida" layoutX="110.0" layoutY="154.0" style="-fx-font-size: 18;" text="Bienvenido Usuario" />
@@ -97,14 +97,14 @@ and open the template in the editor.
                 </Label>
                 <ImageView fitHeight="96.0" fitWidth="92.0" layoutX="812.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/ACP_PNG.png" />
+                        <Image url="@../../Resources/ACP_PNG.png" />
                     </image>
                 </ImageView>
                 <JFXTextField id="campoNombreNuevo" layoutX="52.0" layoutY="144.0" prefHeight="25.0" prefWidth="244.0" />
                 <JFXTextField id="campoBusquedaAnimal" layoutX="52.0" layoutY="247.0" prefHeight="25.0" prefWidth="244.0" />
                 <ImageView id="fotoAnimal" fitHeight="150.0" fitWidth="200.0" layoutX="612.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Resources/Icons/dog.png" />
+                        <Image url="@../../Resources/Icons/dog.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="49.0" layoutY="297.0" text="Buscar adoptante:">

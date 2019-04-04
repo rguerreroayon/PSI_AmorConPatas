@@ -2,61 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/accesoDatos_ACP.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/accesoDatos_ACP.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilities/alertbox/AlertBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external libraries/accesoDatos_ACP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/external libraries/accesoDatos_ACP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external libraries/objetosNegocio_ACP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/external libraries/objetosNegocio_ACP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClienteFX_ACP_IntelliJ/controles/controlesVistasFX/ControlVistaAdopcion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClienteFX_ACP_IntelliJ/controles/controlesVistasFX/ControlVistaAdopcion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClienteFX_ACP_IntelliJ/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClienteFX_ACP_IntelliJ/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controles/controlesDatos/ControlAdopciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controles/controlesDatos/ControlAdopciones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controles/controlesVistasFX/ControlVistaAdopcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controles/controlesVistasFX/ControlVistaAdopcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/adopcion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/adopcion/vistaAdopcion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/ConexionBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/ConexionBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAdopciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAdopciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAdoptantes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAdoptantes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAnimales.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOAnimales.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOVoluntarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/DAOVoluntarios.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/Pruebas.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/Pruebas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/Utilidades.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/accesoDatos/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/classes/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/empty/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/generated-sources/ap-source-output/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/build/generated-sources/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/dist/accesoDatos_ACP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/dist/accesoDatos_ACP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/dist/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/src/accesoDatos/Pruebas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../accesoDatos_ACP/src/accesoDatos/Pruebas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/src/accesoDatos/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accesoDatos_ACP/src/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Adoptante.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Adoptante.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Voluntario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/Voluntario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/classes/objetosNegocio/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/empty/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/generated-sources/ap-source-output/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/build/generated-sources/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/dist/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/dist/objetosNegocio_ACP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/dist/objetosNegocio_ACP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adoptante.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Adoptante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Voluntario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/Voluntario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/src/objetosNegocio/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../objetosNegocio_ACP/test/desktop.ini" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,15 +64,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controles/controlesVistasFX/ControlVistaAdopcion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
+            <state relative-caret-position="403">
+              <caret line="97" column="19" lean-forward="true" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2804#2805#0" expanded="true" />
                 <element signature="e#2855#2856#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utilities/alertbox/AlertBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/Pruebas.java" />
         <option value="$PROJECT_DIR$/src/controles/controlesDatos/ControlAdopciones.java" />
         <option value="$PROJECT_DIR$/src/controles/controlesVistasFX/ControlVistaAdopcion.java" />
+        <option value="$PROJECT_DIR$/src/utilities/alertbox/AlertBox.java" />
       </list>
     </option>
   </component>
@@ -255,7 +216,7 @@
               <item name="ClienteFX_ACP_IntelliJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClienteFX_ACP_IntelliJ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="alertbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClienteFX_ACP_IntelliJ" type="b2602c69:ProjectViewProjectNode" />
@@ -426,18 +387,18 @@
       <workItem from="1554370827186" duration="1822000" />
       <workItem from="1554373008582" duration="144000" />
       <workItem from="1554373207749" duration="221000" />
-      <workItem from="1554373477598" duration="7858000" />
+      <workItem from="1554373477598" duration="9240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11347000" />
+    <option name="totallyTimeSpent" value="12729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2153518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2153518" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -447,7 +408,7 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32887402" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32887402" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -549,12 +510,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controles/controlesVistasFX/ControlVistaAdopcion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
+        <state relative-caret-position="403">
+          <caret line="97" column="19" lean-forward="true" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2804#2805#0" expanded="true" />
             <element signature="e#2855#2856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilities/alertbox/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

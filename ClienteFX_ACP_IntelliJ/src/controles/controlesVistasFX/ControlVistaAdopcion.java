@@ -14,6 +14,7 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import objetosNegocio.*;
+import utilities.alertbox.AlertBox;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -86,20 +87,28 @@ public class ControlVistaAdopcion {
         controlMaster = new ControlMaster();
 
         if(campoNombreNuevo.getText().isEmpty()){
+
+            AlertBox.display("Por favor escribe un nombre para la mascota","Nombre vacio");
            return;
         }
 
         if(comboBoxAnimales.getSelectionModel().getSelectedItem() == null || comboBoxAdoptantes.getSelectionModel().getSelectedItem() == null){
+            AlertBox.display("Por favor, selecciona un elemento","Elemento no seleccionado");
+
             return;
         }
 
         if(campoDescripcion.getText().isEmpty()){
+            AlertBox.display("Por favor, escribe una descripción","Descripción vacia");
+
             return;
         }
 
         String f = fecha.getValue()!= null ? fecha.getValue().toString() : "";
 
         if(f.equals("")){
+            AlertBox.display("Por favor, selecciona una fecha","Fecha vacia");
+
             return;
         }
 
@@ -120,7 +129,7 @@ public class ControlVistaAdopcion {
         Adopcion adopcion = new Adopcion(animalAdoptar.getIdAnimal(),adoptante.getIdAdoptante(),1,fechaGregorian,descripcion);
         controlMaster.getcAdopciones().getAdopciones().queryAnadirAdopcion(adopcion,nombreMascota);
 
-        
+
 
 
 

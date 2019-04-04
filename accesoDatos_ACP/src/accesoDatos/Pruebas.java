@@ -21,9 +21,9 @@ public class Pruebas {
         
      //pruebasDAOAdoptantes();
         
-     //pruebasDAOAnimales();
+     pruebasDAOAnimales();
      
-     pruebasDAOAdopciones();
+     
     
             
 
@@ -39,7 +39,12 @@ public class Pruebas {
         
         DAOAnimales da = new DAOAnimales();
         
-        System.out.println(da.queryGetAnimalPorID(1).getNombre());
+        ArrayList <Animal> animales = da.queryGetAnimalesRescatadosPorNombreAnimal("h");
+        
+        
+        for (Object animale : animales) {
+            System.out.println(animale);
+        }
     }
       
     public static void pruebasDAOAdoptantes(){

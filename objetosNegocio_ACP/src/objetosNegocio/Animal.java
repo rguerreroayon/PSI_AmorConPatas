@@ -126,4 +126,10 @@ public class Animal {
         return isAdoptado;
     }
 
+    
+    @Override
+    public String toString(){
+        return "ID: "+this.idAnimal + ", Nombre: "+this.nombre;
+    }
+    
 }

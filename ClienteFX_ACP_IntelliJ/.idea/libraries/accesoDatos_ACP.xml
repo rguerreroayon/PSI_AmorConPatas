@@ -4,6 +4,7 @@
       <root url="jar://$PROJECT_DIR$/external libraries/accesoDatos_ACP.jar!/" />
       <root url="jar://$PROJECT_DIR$/external libraries/jfoenix-8.0.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/external libraries/objetosNegocio_ACP.jar!/" />
+      <root url="jar://$PROJECT_DIR$/external libraries/mysql-connector-java-8.0.15.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

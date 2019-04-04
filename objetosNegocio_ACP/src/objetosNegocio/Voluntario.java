@@ -87,5 +87,10 @@ public class Voluntario extends Persona {
         }
         return true;
     }
+    
+    @Override
+    public String toString(){
+        return "ID Voluntario: "+idVoluntario+", Nombre Voluntario: "+getNombre();
+    }
 
 }

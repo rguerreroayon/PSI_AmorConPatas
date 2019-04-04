@@ -52,4 +52,8 @@ public class Adoptante extends Persona {
         this.idAdoptante = idAdoptante;
     }
 
+    @Override
+    public String toString(){
+        return "ID: "+this.idAdoptante + ", Nombre: "+this.getNombre();
+    }
 }

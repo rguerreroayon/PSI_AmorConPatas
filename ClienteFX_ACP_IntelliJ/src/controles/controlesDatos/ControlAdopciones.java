@@ -18,7 +18,8 @@ public class ControlAdopciones {
     public ControlAdopciones(){
         adopciones = new DAOAdopciones();
     }
-    
-    
-    
+
+    public DAOAdopciones getAdopciones() {
+        return adopciones;
+    }
 }

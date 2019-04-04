@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlesFX;
+package Controles.ControlesDatosFX;
 
 import accesoDatos.DAOAdoptantes;
 
@@ -13,5 +13,15 @@ import accesoDatos.DAOAdoptantes;
  */
 public class ControlAdoptantes {
 
-    DAOAdoptantes adoptantes = new DAOAdoptantes();
+    DAOAdoptantes adoptantes;
+
+    public ControlAdoptantes() {
+        adoptantes = new DAOAdoptantes();
+    }
+
+    public DAOAdoptantes getAdoptantes() {
+        return adoptantes;
+    }
+    
+    
 }

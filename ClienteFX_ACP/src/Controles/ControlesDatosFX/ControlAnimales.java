@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlesFX;
+package Controles.ControlesDatosFX;
 
 import accesoDatos.DAOAnimales;
 
@@ -13,6 +13,19 @@ import accesoDatos.DAOAnimales;
  */
 public class ControlAnimales {
 
-    DAOAnimales animales = new DAOAnimales();
+    DAOAnimales animales;
 
+    public ControlAnimales() {
+        animales = new DAOAnimales();
+    }
+
+    public DAOAnimales getAnimales() {
+        return animales;
+    }
+
+    
+
+    
+    
+    
 }

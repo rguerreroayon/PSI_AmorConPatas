@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Login;
+package Vista.MenuPrincipal;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -14,10 +14,10 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author roberto
  */
-public class LoginPane extends AnchorPane {
+public class MenuPrincipalFXPane extends AnchorPane {
     
-    public LoginPane() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPane.fxml"));
+    public MenuPrincipalFXPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MenuPrincipalFXPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         
@@ -27,7 +27,7 @@ public class LoginPane extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
-    
+        
     @FXML
     private void initialize() {
     }

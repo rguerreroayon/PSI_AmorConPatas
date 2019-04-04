@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlesFX;
+package Controles.ControlesDatosFX;
 
 import accesoDatos.DAOVoluntarios;
 
@@ -13,6 +13,17 @@ import accesoDatos.DAOVoluntarios;
  */
 public class ControlVoluntarios {
 
-    DAOVoluntarios voluntarios = new DAOVoluntarios();
+    DAOVoluntarios voluntarios;
+    
+    public ControlVoluntarios(){
+        voluntarios = new DAOVoluntarios();
+    }
+
+    public DAOVoluntarios getVoluntarios() {
+        return voluntarios;
+    }
+    
+    
+    
 
 }

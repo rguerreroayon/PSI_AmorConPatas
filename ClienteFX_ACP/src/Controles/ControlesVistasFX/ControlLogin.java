@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlesFX;
-
-import accesoDatos.DAOAdopciones;
+package Controles.ControlesVistasFX;
 
 /**
  *
- * @author roberto
+ * @author rob
  */
-public class ControlAdopciones {
-
-    DAOAdopciones adopciones = new DAOAdopciones();
+public class ControlLogin {
+    
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<fx:root id="AnchorPane" prefHeight="500.0" prefWidth="791.0" style="-fx-background-color: #FFF0BA;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="413.0" layoutY="44.0">
+         <children>
+            <Pane prefHeight="412.0" prefWidth="344.0" style="-fx-background-color: #FFFF; -fx-border-color: #f7cc74; -fx-border-width: 10px;">
+               <children>
+                  <Text layoutX="90.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25; -fx-font-family: Arial;" text="Inicio de Sesión" />
+                  <JFXTextField id="campoUsuario" alignment="CENTER" layoutX="36.0" layoutY="103.0" prefHeight="25.0" prefWidth="284.0" promptText="Usuario" />
+                  <JFXPasswordField id="campoContrasena" alignment="CENTER" layoutX="36.0" layoutY="206.0" prefHeight="25.0" prefWidth="284.0" promptText="Contraseña" />
+                  <JFXButton id="botonInciarSesion" layoutX="90.0" layoutY="278.0" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #f7cc74;" text="Iniciar Sesión" />
+                  <JFXButton id="botonOlvidarContrasena" layoutX="20.0" layoutY="363.0" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: #f7cc74;" text="¿Olvidaste tu contraseña?" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="58.0" layoutY="104.0">
+         <children>
+            <ImageView fitHeight="385.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/ACP_PNG.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="14.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/facebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="73.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/whatsapp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="49.0" layoutX="129.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Icons/instagram.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>

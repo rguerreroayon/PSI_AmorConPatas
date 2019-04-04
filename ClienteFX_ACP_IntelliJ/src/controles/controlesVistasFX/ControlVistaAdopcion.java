@@ -13,6 +13,8 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.paint.Color;
 import objetosNegocio.*;
 import utilities.alertbox.AlertBox;
 
@@ -88,18 +90,18 @@ public class ControlVistaAdopcion {
 
         if(campoNombreNuevo.getText().isEmpty()){
 
-            AlertBox.display("Por favor escribe un nombre para la mascota","Nombre vacio");
+            AlertBox.display("Por favor escribe un nombre para la mascota","Nombre vacio","/resources/Icons/warning.png");
            return;
         }
 
         if(comboBoxAnimales.getSelectionModel().getSelectedItem() == null || comboBoxAdoptantes.getSelectionModel().getSelectedItem() == null){
-            AlertBox.display("Por favor, selecciona un elemento","Elemento no seleccionado");
+            AlertBox.display("Por favor, selecciona un elemento","Elemento no seleccionado","/resources/Icons/warning.png");
 
             return;
         }
 
         if(campoDescripcion.getText().isEmpty()){
-            AlertBox.display("Por favor, escribe una descripción","Descripción vacia");
+            AlertBox.display("Por favor, escribe una descripción","Descripción vacia","/resources/Icons/warning.png");
 
             return;
         }
@@ -107,7 +109,7 @@ public class ControlVistaAdopcion {
         String f = fecha.getValue()!= null ? fecha.getValue().toString() : "";
 
         if(f.equals("")){
-            AlertBox.display("Por favor, selecciona una fecha","Fecha vacia");
+            AlertBox.display("Por favor, selecciona una fecha","Fecha vacia","/resources/Icons/warning.png");
 
             return;
         }
@@ -126,9 +128,33 @@ public class ControlVistaAdopcion {
         if(animal.getIsAdoptado() == 1){
             return;
         }
-        Adopcion adopcion = new Adopcion(animalAdoptar.getIdAnimal(),adoptante.getIdAdoptante(),1,fechaGregorian,descripcion);
-        controlMaster.getcAdopciones().getAdopciones().queryAnadirAdopcion(adopcion,nombreMascota);
+        ArrayList<Adopcion> adopciones = controlMaster.getcAdopciones().getAdopciones().transformarQuerySet();
 
+        for (Adopcion ad: adopciones
+             ) {
+            if(ad.getIdAnimal() == animalAdoptar.getIdAnimal()){
+                AlertBox.display("Este animal ya esta adoptado en la base de datos", "Adopción Fallida", "resources/Icons/warning.png");
+
+            }
+
+        }
+
+        Adopcion adopcion = new Adopcion(animalAdoptar.getIdAnimal(),adoptante.getIdAdoptante(),1,fechaGregorian,descripcion);
+
+        int resultadoQuery = controlMaster.getcAdopciones().getAdopciones().queryAnadirAdopcion(adopcion,nombreMascota);
+
+
+
+        if(resultadoQuery == 2){
+            AlertBox.display("Se ha realizado la adopción exitosamente","Adopción exitosa","/resources/Icons/dog-house.png");
+            handleBuscarAdoptante();
+            handleBuscarMascota();
+            return;
+        }else{
+            AlertBox.display("Algo salio mal", "Adopción Fallida", "resources/Icons/warning.png");
+            comboBoxAnimales.getItems().clear();
+            return;
+        }
 
 
 
@@ -150,33 +176,30 @@ public class ControlVistaAdopcion {
         String animal = campoBusquedaAnimal.getText();
         ArrayList <Animal> listaAnimales = controlMaster.getcAnimales().getAnimales().queryGetAnimalesRescatadosPorNombreAnimal(animal);
 
-
-        for (Animal a: listaAnimales){
-            if(!comboBoxAnimales.getItems().contains(a)){
-                comboBoxAnimales.getItems().add(a);
-            }
-        }
-
-
+        comboBoxAnimales.getItems().clear();
+        comboBoxAnimales.getItems().addAll(listaAnimales);
 
     }
     
     public void handleBuscarAdoptante(){
         controlMaster = new ControlMaster();
-
         String adoptante = campoNombreAdoptante.getText();
+        ArrayList <Adoptante> listaAdoptantes = controlMaster.getcAdoptantes().getAdoptantes().queryGetAdoptantesPorNombre(adoptante);
 
-
-            ArrayList <Adoptante> listaAdoptantes = controlMaster.getcAdoptantes().getAdoptantes().queryGetAdoptantesPorNombre(adoptante);
-
-
-
-
-            comboBoxAdoptantes.getItems().addAll(listaAdoptantes);
+        comboBoxAdoptantes.getItems().clear();
+        comboBoxAdoptantes.getItems().addAll(listaAdoptantes);
 
 
 
-        }
+    }
 
+    public void handleElegirAnimal(){
+
+    }
+
+
+    public void handleElegirAdoptante(){
+
+    }
     
 }

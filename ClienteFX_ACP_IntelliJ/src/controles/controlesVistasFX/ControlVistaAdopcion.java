@@ -13,11 +13,14 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.paint.Color;
+import javafx.scene.control.DateCell;
+import javafx.scene.control.DatePicker;
+import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import javafx.util.Callback;
 import objetosNegocio.*;
 import utilities.alertbox.AlertBox;
-
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
@@ -84,9 +87,46 @@ public class ControlVistaAdopcion {
     JFXDatePicker fecha;
 
     //Handlers 
-    
+
+    public void handlerFecha(){
+        LocalDate today = LocalDate.now();
+        LocalDate startingPoint = LocalDate.of(today.getYear(),today.getMonth(),(today.getDayOfMonth() - 7));
+        LocalDate offPoint = LocalDate.of(today.getYear(),today.getMonth(),(today.getDayOfMonth()));
+        fecha.setEditable(false);
+
+
+
+
+
+
+        restrictDate(fecha,startingPoint,offPoint);
+    }
+
+    private static void restrictDate(JFXDatePicker date, LocalDate min, LocalDate max){
+        final Callback<DatePicker, DateCell> dayCellFactory = new Callback<DatePicker, DateCell>() {
+            @Override
+            public DateCell call(DatePicker param) {
+                return new DateCell(){
+                    public void updateItem(LocalDate item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item.isBefore(min)) {
+                            setDisable(true);
+                            setStyle("-fx-background-color: #ffc0cb;");
+                        }else if (item.isAfter(max)) {
+                            setDisable(true);
+                            setStyle("-fx-background-color: #ffc0cb;");
+                        }
+                    }
+                };
+            }
+        };
+        date.setDayCellFactory(dayCellFactory);
+    }
+
+
     public void handlerBotonConfirmarAdopcion(){
         controlMaster = new ControlMaster();
+
 
         if(campoNombreNuevo.getText().isEmpty()){
 
@@ -113,6 +153,22 @@ public class ControlVistaAdopcion {
 
             return;
         }
+
+
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!campoBusquedaAnimal.getText().matches(regularExpression) || !campoNombreNuevo.getText().matches(regularExpression) || !campoNombreAdoptante.getText().matches(regularExpression)){
+            AlertBox.display("No se pueden usar caracteres especiales en los campos de texto","Error de carácteres", "/resources/Icons/warning.png");
+        }
+
+        if(campoBusquedaAnimal.getText().length() > 15 || campoNombreNuevo.getText().length() > 15 || campoDescripcion.getText().length() > 50 || campoNombreAdoptante.getText().length() > 30){
+            AlertBox.display("Excediste la cantidad de caracteres","Exceso de caracteres", "/resources/Icons/warning.png");
+
+        }
+
+
+
+
 
         GregorianCalendar fechaGregorian = Utilidades.convertirFecha_StringToGregorian(f);
 
@@ -168,13 +224,86 @@ public class ControlVistaAdopcion {
     
     public void handlerBotonCancelar(){
         botonCancelar.setText("It works!!");
+        Stage stage = (Stage) botonCancelar.getScene().getWindow();
+        stage.close();
+
     }
-    
-    
+
+    public void handlerKeyTypedInFecha(){
+
+        fecha.setEditable(false);
+
+    }
+
+    public void handlerRestriccionCaracteres_Animal(KeyEvent event){
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!event.getCharacter().matches(regularExpression )){
+            event.consume();
+        }
+
+        if(campoBusquedaAnimal.getText().length() > 15 ){
+            event.consume();
+        }
+
+
+
+    }
+
+    public void handlerRestriccionCaracteres_AnimalNuevo(KeyEvent event){
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!event.getCharacter().matches(regularExpression )){
+            event.consume();
+        }
+
+        if(campoNombreNuevo.getText().length() > 15){
+            event.consume();
+        }
+
+
+
+    }
+
+    public void handlerRestriccionCaracteres_Adoptante(KeyEvent event){
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!event.getCharacter().matches(regularExpression)){
+            event.consume();
+        }
+
+        if(campoNombreAdoptante.getText().length() > 30){
+            event.consume();
+        }
+
+
+    }
+
+    public void handlerRestriccionCaracteres_Descripcion(KeyEvent event){
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!event.getCharacter().matches(regularExpression)){
+            event.consume();
+        }
+
+        if(campoDescripcion.getText().length() > 50){
+            event.consume();
+        }
+
+
+    }
+
     public void handleBuscarMascota(){
         controlMaster = new ControlMaster();
         String animal = campoBusquedaAnimal.getText();
         ArrayList <Animal> listaAnimales = controlMaster.getcAnimales().getAnimales().queryGetAnimalesRescatadosPorNombreAnimal(animal);
+
+        if(listaAnimales.isEmpty()){
+            AlertBox.display("No existen mascotas con ese nombre", "Busqueda fallida", "resources/Icons/warning.png");
+            comboBoxAnimales.getItems().clear();
+            return;
+        }
+
 
         comboBoxAnimales.getItems().clear();
         comboBoxAnimales.getItems().addAll(listaAnimales);
@@ -186,6 +315,12 @@ public class ControlVistaAdopcion {
         String adoptante = campoNombreAdoptante.getText();
         ArrayList <Adoptante> listaAdoptantes = controlMaster.getcAdoptantes().getAdoptantes().queryGetAdoptantesPorNombre(adoptante);
 
+        if(listaAdoptantes.isEmpty()){
+            AlertBox.display("No existen adoptantes con ese nombre", "Busqueda fallida", "resources/Icons/warning.png");
+            comboBoxAnimales.getItems().clear();
+            return;
+        }
+
         comboBoxAdoptantes.getItems().clear();
         comboBoxAdoptantes.getItems().addAll(listaAdoptantes);
 
@@ -193,9 +328,7 @@ public class ControlVistaAdopcion {
 
     }
 
-    public void handleElegirAnimal(){
 
-    }
 
 
     public void handleElegirAdoptante(){

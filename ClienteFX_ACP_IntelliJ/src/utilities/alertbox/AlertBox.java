@@ -13,6 +13,7 @@ public class AlertBox {
 
     public static void display(String message, String title,String urlIcon){
         Stage window = new Stage();
+        window.setResizable(false);
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
 

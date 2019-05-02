@@ -90,7 +90,9 @@ public class ControlVistaAdopcion {
 
     public void handlerFecha(){
         LocalDate today = LocalDate.now();
-        LocalDate startingPoint = LocalDate.of(today.getYear(),today.getMonth(),(today.getDayOfMonth() - 7));
+        System.out.println(today.toString());
+        LocalDate theDay = today.minusDays(7);
+        LocalDate startingPoint = LocalDate.of(theDay.getYear(),theDay.getMonth(),(theDay.getDayOfMonth()));
         LocalDate offPoint = LocalDate.of(today.getYear(),today.getMonth(),(today.getDayOfMonth()));
         fecha.setEditable(false);
 
@@ -155,11 +157,9 @@ public class ControlVistaAdopcion {
         }
 
 
-        String regularExpression = "^[a-zA-Z]+$";
+        String regularExpression = "^[a-zA-Z ]+$";
 
-        if(!campoBusquedaAnimal.getText().matches(regularExpression) || !campoNombreNuevo.getText().matches(regularExpression) || !campoNombreAdoptante.getText().matches(regularExpression)){
-            AlertBox.display("No se pueden usar caracteres especiales en los campos de texto","Error de carácteres", "/resources/Icons/warning.png");
-        }
+
 
         if(campoBusquedaAnimal.getText().length() > 15 || campoNombreNuevo.getText().length() > 15 || campoDescripcion.getText().length() > 50 || campoNombreAdoptante.getText().length() > 30){
             AlertBox.display("Excediste la cantidad de caracteres","Exceso de caracteres", "/resources/Icons/warning.png");
@@ -203,8 +203,7 @@ public class ControlVistaAdopcion {
 
         if(resultadoQuery == 2){
             AlertBox.display("Se ha realizado la adopción exitosamente","Adopción exitosa","/resources/Icons/dog-house.png");
-            handleBuscarAdoptante();
-            handleBuscarMascota();
+            limpiarPantalla();
             return;
         }else{
             AlertBox.display("Algo salio mal", "Adopción Fallida", "resources/Icons/warning.png");
@@ -233,6 +232,15 @@ public class ControlVistaAdopcion {
 
         fecha.setEditable(false);
 
+    }
+
+    public void limpiarPantalla(){
+        comboBoxAnimales.getItems().clear();
+        comboBoxAdoptantes.getItems().clear();
+        campoDescripcion.setText("");
+        campoNombreNuevo.setText("");
+        campoBusquedaAnimal.setText("");
+        campoNombreAdoptante.setText("");
     }
 
     public void handlerRestriccionCaracteres_Animal(KeyEvent event){
@@ -280,7 +288,7 @@ public class ControlVistaAdopcion {
     }
 
     public void handlerRestriccionCaracteres_Descripcion(KeyEvent event){
-        String regularExpression = "^[a-zA-Z]+$";
+        String regularExpression = "^[a-zA-Z ]+$";
 
         if(!event.getCharacter().matches(regularExpression)){
             event.consume();
@@ -295,7 +303,14 @@ public class ControlVistaAdopcion {
 
     public void handleBuscarMascota(){
         controlMaster = new ControlMaster();
+
+
         String animal = campoBusquedaAnimal.getText();
+        if(animal.isEmpty()){
+            AlertBox.display("El campo de texto esta vacío", "Busqueda fallida", "resources/Icons/warning.png");
+            return;
+        }
+
         ArrayList <Animal> listaAnimales = controlMaster.getcAnimales().getAnimales().queryGetAnimalesRescatadosPorNombreAnimal(animal);
 
         if(listaAnimales.isEmpty()){
@@ -308,11 +323,19 @@ public class ControlVistaAdopcion {
         comboBoxAnimales.getItems().clear();
         comboBoxAnimales.getItems().addAll(listaAnimales);
 
+        if(!listaAnimales.isEmpty()){
+            AlertBox.display("Las mascotas han sido actualizadas!","Mascotas actualizadas","resources/Icons/dog_actualizado.png");
+        }
+
     }
     
     public void handleBuscarAdoptante(){
         controlMaster = new ControlMaster();
         String adoptante = campoNombreAdoptante.getText();
+        if(adoptante.isEmpty()){
+            AlertBox.display("El campo de texto esta vacío", "Busqueda fallida", "resources/Icons/warning.png");
+            return;
+        }
         ArrayList <Adoptante> listaAdoptantes = controlMaster.getcAdoptantes().getAdoptantes().queryGetAdoptantesPorNombre(adoptante);
 
         if(listaAdoptantes.isEmpty()){
@@ -324,15 +347,15 @@ public class ControlVistaAdopcion {
         comboBoxAdoptantes.getItems().clear();
         comboBoxAdoptantes.getItems().addAll(listaAdoptantes);
 
-
-
-    }
-
-
-
-
-    public void handleElegirAdoptante(){
+        if(!listaAdoptantes.isEmpty()){
+            AlertBox.display("Los adoptantes han sido actualizados!","Adoptantes actualizadas","resources/Icons/boy_actualizado.png");
+        }
 
     }
+
+
+
+
+
     
 }

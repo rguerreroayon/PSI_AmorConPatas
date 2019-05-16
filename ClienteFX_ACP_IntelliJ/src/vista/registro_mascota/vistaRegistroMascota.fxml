@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.controlesVistasFX.ControlVistaAdopcion">
+<AnchorPane prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.controlesVistasFX.ControlVista_RegistroMascota">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="279.0" style="-fx-background-color: beige;">
             <effect>
@@ -91,27 +91,27 @@
                         <Image url="@/resources/ACP_PNG.png" />
                     </image>
                 </ImageView>
-                <JFXTextField id="nombre" fx:id="campoNombreNuevo" layoutX="200.0" layoutY="81.0" onKeyTyped="#handlerRestriccionCaracteres_AnimalNuevo" prefHeight="25.0" prefWidth="251.0" />
+                <JFXTextField id="nombre" fx:id="campoNombre" layoutX="200.0" layoutY="81.0" onKeyTyped="#handlerRestriccionCaracteres_nombre" prefHeight="25.0" prefWidth="251.0" />
                 <JFXDatePicker id="fecha" fx:id="fecha" layoutX="41.0" layoutY="231.0" onMouseMoved="#handlerKeyTypedInFecha" onShowing="#handlerFecha" prefHeight="25.0" prefWidth="225.0" />
                 <Label layoutX="41.0" layoutY="300.0" text="Descripción del rescate:">
                     <font>
                         <Font name="Segoe UI" size="18.0" />
                     </font>
                 </Label>
-                <JFXTextArea id="campoDescripcionRescate" fx:id="campoDescripcion" layoutX="43.0" layoutY="323.0" onKeyTyped="#handlerRestriccionCaracteres_Descripcion" prefHeight="81.0" prefWidth="482.0" />
-                <JFXButton fx:id="botonConfirmarRegistrar" layoutX="625.0" layoutY="542.0" onAction="#handlerBotonConfirmarAdopcion" style="-fx-background-color: d97389;" text="Confirmar Registro" />
+                <JFXTextArea id="campoDescripcionRescate" fx:id="campoDescripcion" layoutX="43.0" layoutY="323.0" onKeyTyped="#handlerRestriccionCaracteres_descripcion" prefHeight="81.0" prefWidth="482.0" />
+                <JFXButton fx:id="botonConfirmarRegistro" layoutX="625.0" layoutY="542.0" onAction="#handlerBotonConfirmarRegistro" style="-fx-background-color: d97389;" text="Confirmar Registro" />
                 <JFXButton fx:id="botonCancelar" layoutX="796.0" layoutY="542.0" onAction="#handlerBotonCancelar" style="-fx-background-color: d97389;" text="Cancelar" />
-            <JFXTextField fx:id="campoEspecieOtro" layoutX="317.0" layoutY="126.0" onKeyTyped="#handlerRestriccionCaracteres_AnimalNuevo" prefHeight="25.0" prefWidth="134.0" />
+            <JFXTextField fx:id="campoEspecieOtro" layoutX="317.0" layoutY="126.0" onKeyTyped="#handlerRestriccionCaracteres_otro" prefHeight="25.0" prefWidth="134.0" />
             <Label layoutX="41.0" layoutY="172.0" prefHeight="25.0" prefWidth="78.0" text="Raza:">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="campoRaza" layoutX="170.0" layoutY="163.0" onKeyTyped="#handlerRestriccionCaracteres_AnimalNuevo" prefHeight="27.0" prefWidth="147.0" />
-            <JFXRadioButton layoutX="124.0" layoutY="131.0" text="Perro" />
-            <JFXRadioButton layoutX="188.0" layoutY="131.0" text="Gato" />
-            <JFXRadioButton layoutX="258.0" layoutY="131.0" text="Otro" />
-            <JFXRadioButton fx:id="radio" layoutX="89.0" layoutY="176.0" text="Si aplica" />
+            <JFXTextField fx:id="campoRaza" layoutX="170.0" layoutY="163.0"  prefHeight="27.0" prefWidth="147.0" onKeyTyped="#handlerRestriccionCaracteres_campoRaza"/>
+            <JFXRadioButton fx:id="botonRadioPerro" layoutX="124.0" layoutY="131.0" text="Perro" onMouseClicked="#handlerRadioButton_perro" />
+            <JFXRadioButton fx:id="botonRadioGato" layoutX="188.0" layoutY="131.0" text="Gato" onMouseClicked="#handlerRadioButton_gato"/>
+            <JFXRadioButton fx:id="botonRadioOtro" layoutX="258.0" layoutY="131.0" text="Otro" onMouseClicked="#handlerRadioButton_otro"/>
+            <JFXRadioButton fx:id="botonRadioRaza" layoutX="89.0" layoutY="176.0" text="Si aplica" onMouseClicked="#handlerRadioButton_raza"/>
             </children>
         </AnchorPane>
     </children>

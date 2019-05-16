@@ -1,27 +1,28 @@
 package controles.controlesVistasFX;
 
+import accesoDatos.Utilidades;
 import com.jfoenix.controls.*;
 import controles.controlesDatos.ControlMaster;
 import javafx.fxml.FXML;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.scene.input.KeyEvent;
+import objetosNegocio.Animal;
 import utilities.alertbox.AlertBox;
 
 
 import java.time.LocalDate;
+import java.util.GregorianCalendar;
 
 public class ControlVista_RegistroMascota {
 
     //ControlMaster
-    ControlMaster master = new ControlMaster();
+    ControlMaster master ;
     //Toggle
-    final ToggleGroup radioBotones = new ToggleGroup();
-    final ToggleGroup toggleRaza = new ToggleGroup();
+    ToggleGroup radioBotones = new ToggleGroup();
 
     //AnchorPane Padre
 
@@ -67,32 +68,28 @@ public class ControlVista_RegistroMascota {
 
     //Radio Buttons
     @FXML
-    JFXRadioButton radioPerro;
+    JFXRadioButton botonRadioPerro;
 
     @FXML
-    JFXRadioButton radioGato;
+    JFXRadioButton botonRadioGato;
 
     @FXML
-    JFXRadioButton radioOtro;
+    JFXRadioButton botonRadioOtro;
 
     @FXML
-    JFXRadioButton radioRaza;
+    JFXRadioButton botonRadioRaza;
 
     //Fecha API
     @FXML
     JFXDatePicker fecha;
 
-    private void setRadioGroup(){
-        radioOtro.setToggleGroup(radioBotones);
-        radioGato.setToggleGroup(radioBotones);
-        radioPerro.setToggleGroup(radioBotones);
-        radioRaza.setToggleGroup(toggleRaza);
-    }
 
     //Handler Papa
     @FXML
     public void initialize(){
-        setRadioGroup();
+        botonRadioOtro.setToggleGroup(radioBotones);
+        botonRadioGato.setToggleGroup(radioBotones);
+        botonRadioPerro.setToggleGroup(radioBotones);
         campoEspecieOtro.setDisable(true);
         campoRaza.setDisable(true);
     }
@@ -101,15 +98,27 @@ public class ControlVista_RegistroMascota {
     //Handlers Restricciones caracteres
     public void handlerRestriccionCaracteres_nombre(KeyEvent event){
         String regularExpression = "^[a-zA-Z]+$";
-
         if(!event.getCharacter().matches(regularExpression )){
             event.consume();
         }
+
 
         if(campoNombre.getText().length() > 15 ){
             event.consume();
         }
 
+    }
+
+    public void handlerRestriccionCaracteres_campoRaza(KeyEvent event){
+        String regularExpression = "^[a-zA-Z]+$";
+
+        if(!event.getCharacter().matches(regularExpression )){
+            event.consume();
+        }
+
+        if(campoRaza.getText().length() > 15 ){
+            event.consume();
+        }
     }
 
     public void handlerRestriccionCaracteres_otro(KeyEvent event){
@@ -125,18 +134,7 @@ public class ControlVista_RegistroMascota {
 
     }
 
-    public void handlerRestriccionCaracteres_raza(KeyEvent event){
-        String regularExpression = "^[a-zA-Z]+$";
 
-        if(!event.getCharacter().matches(regularExpression )){
-            event.consume();
-        }
-
-        if(campoRaza.getText().length() > 15 ){
-            event.consume();
-        }
-
-    }
 
     public void handlerRestriccionCaracteres_descripcion(KeyEvent event){
         String regularExpression = "^[a-zA-Z ]+$";
@@ -152,19 +150,6 @@ public class ControlVista_RegistroMascota {
 
     //Verificacion para anadir
 
-    public void handlerVerificacionRegistroMascota(){
-        if(campoNombre.getText().isEmpty()){
-            AlertBox.display("El campo de texto esta vacío", "Registro fallido", "resources/Icons/warning.png");
-            return;
-        }
-
-        System.out.println(radioBotones.getSelectedToggle().toString());
-
-
-
-    }
-
-
     //Handler Botones y RadioButtons
     public void handlerRadioButton_otro(){
         campoEspecieOtro.setDisable(false);
@@ -173,22 +158,28 @@ public class ControlVista_RegistroMascota {
 
     public void handlerRadioButton_gato(){
         campoEspecieOtro.setDisable(true);
+        campoEspecieOtro.setText("");
 
     }
 
     public void handlerRadioButton_perro(){
         campoEspecieOtro.setDisable(true);
+        campoEspecieOtro.setText("");
 
     }
 
     public void handlerRadioButton_raza(){
-        campoRaza.setDisable(false);
 
+        if(botonRadioRaza.isSelected()){
+            campoRaza.setDisable(false);
+        }else{
+            campoRaza.setText("");
+            campoRaza.setDisable(true);
+        }
     }
 
 
     public void handlerBotonCancelar(){
-        botonCancelar.setText("It works!!");
         Stage stage = (Stage) botonCancelar.getScene().getWindow();
         stage.close();
 
@@ -236,4 +227,87 @@ public class ControlVista_RegistroMascota {
         fecha.setEditable(false);
 
     }
+
+    private void limpiarPantalla(){
+        campoNombre.setText("");
+        campoDescripcion.setText("");
+        fecha.resetValidation();
+    }
+
+    public void handlerBotonConfirmarRegistro(){
+        master = new ControlMaster();
+
+        //Restriccion 1 - Verificar si el campo del nombre no esta vacio
+        if(campoNombre.getText().isEmpty()){
+            AlertBox.display("Por favor escribe un nombre para la mascota","Nombre vacio","/resources/Icons/warning.png");
+            return;
+        }
+
+        //Restriccion 2 - Verificar si el campo de descripcion no esta vacio
+        if(campoDescripcion.getText().isEmpty()){
+            AlertBox.display("Por favor escribe una descripción de este rescate","Descripción vacía","/resources/Icons/warning.png");
+            return;
+        }
+
+
+        //Verificar que se haya seleccionado una fecha
+        String f = fecha.getValue()!= null ? fecha.getValue().toString() : "";
+        if(f.equals("")){
+            AlertBox.display("Por favor, selecciona una fecha","Fecha vacia","/resources/Icons/warning.png");
+
+            return;
+        }
+
+        if(radioBotones.getSelectedToggle() == null){
+            AlertBox.display("Por favor, seleccione una especie","Especie no seleccionada","/resources/Icons/warning.png");
+
+            return;
+        }
+
+        if(radioBotones.getSelectedToggle().equals(botonRadioOtro) &&campoEspecieOtro.getText().isEmpty() ){
+            System.out.println("IT WORKS");
+            AlertBox.display("Por favor, especifica la especie en el campo de texto","Otra especie no seleccionada","/resources/Icons/warning.png");
+            return;
+        }
+
+        String nombreAnimal = campoNombre.getText();
+        String especie = "";
+        String raza;
+        GregorianCalendar fechaRegistro = Utilidades.convertirFecha_StringToGregorian(f);;
+        int idVoluntario = 1; //Aqui tenenemos que programar
+        String descripcionFinal = campoDescripcion.getText();
+
+
+        if(radioBotones.getSelectedToggle().equals(botonRadioOtro)){
+            especie = campoEspecieOtro.getText();
+        }
+
+        if (radioBotones.getSelectedToggle().equals(botonRadioGato)) {
+            especie = "Gato";
+        }
+
+        if (radioBotones.getSelectedToggle().equals(botonRadioPerro)) {
+            especie = "Perro";
+        }
+
+        if(botonRadioRaza.isSelected()){
+            raza = campoRaza.getText();
+        }else{
+            raza = "No aplica";
+        }
+
+        Animal animal = new Animal(nombreAnimal,especie,raza,fechaRegistro,idVoluntario,descripcionFinal,-1);
+
+       int resultadoQuery = master.getcAnimales().getAnimales().queryAgregarAnimal(animal);
+        System.out.println(resultadoQuery);
+        if(resultadoQuery == 1){
+            AlertBox.display("Se ha realizado el registro de rescate exitosamente","Rescate exitoso","/resources/Icons/dog-house.png");
+            limpiarPantalla();
+            return;
+        }else{
+            AlertBox.display("Algo salio mal", "Rescate fallido", "resources/Icons/warning.png");
+            return;
+        }
+    }
+
 }

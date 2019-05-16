@@ -1,6 +1,5 @@
 package vista.adopcion;
 
-import controles.controlesVistasFX.ControlVistaAdopcion;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

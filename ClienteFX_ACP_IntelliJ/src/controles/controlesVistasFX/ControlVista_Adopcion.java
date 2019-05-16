@@ -28,7 +28,7 @@ import java.util.GregorianCalendar;
  *
  * @author rob
  */
-public class ControlVistaAdopcion {
+public class ControlVista_Adopcion {
 
     //ControlMaster
     ControlMaster controlMaster;

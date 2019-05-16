@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.controlesVistasFX.ControlVistaAdopcion">
+<AnchorPane prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.controlesVistasFX.ControlVista_Adopcion">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="279.0" style="-fx-background-color: beige;">
             <effect>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTogglePane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.controlesVistasFX.ControlVistaAdopcion">
+<AnchorPane prefHeight="600.0" prefWidth="994.0" fx:id="father" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controles.controlesVistasFX.ControlVista_RegistroMascota">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="279.0" style="-fx-background-color: beige;">
             <effect>
@@ -71,18 +72,17 @@
         </AnchorPane>
         <AnchorPane layoutX="314.0" prefHeight="600.0" prefWidth="903.0">
             <children>
-                <JFXComboBox fx:id="comboBoxAnimales" layoutX="316.0" layoutY="247.0" prefHeight="25.0" prefWidth="313.0" />
-                <Label layoutX="356.0" layoutY="41.0" text="Realizar Adopción">
+                <Label layoutX="284.0" layoutY="43.0" text="Registrar Mascota Rescatada">
                     <font>
                         <Font name="Segoe UI" size="24.0" />
                     </font>
                 </Label>
-                <Label layoutX="52.0" layoutY="109.0" text="Nombre de la mascota:">
+                <Label layoutX="41.0" layoutY="82.0" text="Nombre temporal:">
                     <font>
                         <Font name="Segoe UI" size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="52.0" layoutY="204.0" text="Buscar mascota:">
+                <Label layoutX="41.0" layoutY="127.0" prefHeight="23.0" prefWidth="78.0" text="Especie:">
                     <font>
                         <Font name="Segoe UI" size="18.0" />
                     </font>
@@ -92,33 +92,30 @@
                         <Image url="@/resources/ACP_PNG.png" />
                     </image>
                 </ImageView>
-                <JFXTextField fx:id="campoNombreNuevo" layoutX="52.0" layoutY="144.0" onKeyTyped="#handlerRestriccionCaracteres_AnimalNuevo" prefHeight="25.0" prefWidth="244.0" />
-                <JFXTextField fx:id="campoBusquedaAnimal" layoutX="52.0" layoutY="247.0" onKeyTyped="#handlerRestriccionCaracteres_Animal" prefHeight="25.0" prefWidth="244.0" />
-                <ImageView fx:id="fotoAnimal" fitHeight="150.0" fitWidth="200.0" layoutX="704.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@/resources/Icons/dog.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="49.0" layoutY="297.0" text="Buscar adoptante:">
+                <JFXTextField id="nombre" fx:id="campoNombre" layoutX="200.0" layoutY="81.0" onKeyTyped="#handlerRestriccionCaracteres_nombre" prefHeight="25.0" prefWidth="251.0" />
+                <JFXDatePicker id="fecha" fx:id="fecha" layoutX="41.0" layoutY="231.0" onMouseMoved="#handlerKeyTypedInFecha" onShowing="#handlerFecha" prefHeight="25.0" prefWidth="225.0" />
+                <Label layoutX="41.0" layoutY="300.0" text="Descripción del rescate:">
                     <font>
                         <Font name="Segoe UI" size="18.0" />
                     </font>
                 </Label>
-                <JFXTextField fx:id="campoNombreAdoptante" layoutX="52.0" layoutY="327.0" onKeyTyped="#handlerRestriccionCaracteres_Adoptante" prefHeight="25.0" prefWidth="244.0" />
-                <JFXComboBox fx:id="comboBoxAdoptantes" layoutX="316.0" layoutY="327.0" prefHeight="25.0" prefWidth="313.0" />
-                <JFXDatePicker fx:id="fecha" layoutX="49.0" layoutY="390.0" onMouseMoved="#handlerKeyTypedInFecha" onShowing="#handlerFecha" prefHeight="25.0" prefWidth="225.0" />
-                <Label layoutX="49.0" layoutY="433.0" text="Descripción de la adopción: ">
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                </Label>
-                <JFXTextArea fx:id="campoDescripcion" layoutX="49.0" layoutY="473.0" onKeyTyped="#handlerRestriccionCaracteres_Descripcion" prefHeight="81.0" prefWidth="482.0" />
-                <JFXButton fx:id="botonConfirmarAdopcion" layoutX="625.0" layoutY="542.0" onAction="#handlerBotonConfirmarAdopcion" style="-fx-background-color: d97389;" text="Confirmar Adopción" />
+                <JFXTextArea fx:id="campoDescripcion" layoutX="43.0" layoutY="323.0" onKeyTyped="#handlerRestriccionCaracteres_descripcion" prefHeight="81.0" prefWidth="482.0" />
+                <JFXButton fx:id="botonConfirmarRegistro" layoutX="625.0" layoutY="542.0" onAction="#handlerVerificacionRegistroMascota" style="-fx-background-color: d97389;" text="Confirmar Registro" />
                 <JFXButton fx:id="botonCancelar" layoutX="796.0" layoutY="542.0" onAction="#handlerBotonCancelar" style="-fx-background-color: d97389;" text="Cancelar" />
-            <JFXButton fx:id="botonBuscarMascota" layoutX="212.0" layoutY="203.0" onAction="#handleBuscarMascota" style="-fx-background-color: d97389;" text="Buscar" />
-            <JFXButton fx:id="botonBuscarAdoptante" layoutX="212.0" layoutY="296.0" onAction="#handleBuscarAdoptante" style="-fx-background-color: d97389;" text="Buscar" />
+            <JFXTextField fx:id="campoEspecieOtro" layoutX="317.0" layoutY="126.0" onKeyTyped="#handlerRestriccionCaracteres_otro" prefHeight="25.0" prefWidth="134.0" />
+            <Label layoutX="41.0" layoutY="172.0" prefHeight="25.0" prefWidth="78.0" text="Raza:">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="campoRaza" layoutX="170.0" layoutY="163.0" onKeyTyped="#handlerRestriccionCaracteres_raza" prefHeight="27.0" prefWidth="147.0" />
+            <JFXRadioButton fx:id="radioPerro" onMouseClicked="#handlerRadioButton_perro" layoutX="124.0" layoutY="131.0" text="Perro" />
+            <JFXRadioButton fx:id="radioGato" onMouseClicked="#handlerRadioButton_gato" layoutX="188.0" layoutY="131.0" text="Gato" />
+            <JFXRadioButton fx:id="radioOtro" onMouseClicked="#handlerRadioButton_otro" layoutX="258.0" layoutY="131.0" text="Otro" />
+            <JFXRadioButton fx:id="radioRaza" layoutX="89.0" onMouseClicked="#handlerRadioButton_raza" layoutY="176.0" text="Si aplica" />
             </children>
         </AnchorPane>
+      <JFXTogglePane />
     </children>
 
 

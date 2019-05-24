@@ -3,7 +3,13 @@ package controles.controlesVistasFX;
 import accesoDatos.Utilidades;
 import com.jfoenix.controls.*;
 import controles.controlesDatos.ControlMaster;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ToggleGroup;
@@ -11,9 +17,10 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.scene.input.KeyEvent;
 import objetosNegocio.Animal;
-import utilities.alertbox.AlertBox;
+import utilities.AlertBox;
 
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
@@ -109,6 +116,14 @@ public class ControlVista_RegistroMascota {
 
     }
 
+    public void handlerVentanaRegistrarAdopcion(Event event) throws  IOException {
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("/vista/adopcion/vistaAdopcion.fxml"));
+        Scene homePageScene = new Scene(homePageParent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(homePageScene);
+        app_stage.show();
+    }
+
     public void handlerRestriccionCaracteres_campoRaza(KeyEvent event){
         String regularExpression = "^[a-zA-Z]+$";
 
@@ -119,6 +134,14 @@ public class ControlVista_RegistroMascota {
         if(campoRaza.getText().length() > 15 ){
             event.consume();
         }
+    }
+
+    public void handlerPaseLista(ActionEvent event) throws IOException{
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("/vista/pase_lista/vistaPaseLista.fxml"));
+        Scene homePageScene = new Scene(homePageParent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(homePageScene);
+        app_stage.show();
     }
 
     public void handlerRestriccionCaracteres_otro(KeyEvent event){

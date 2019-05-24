@@ -31,11 +31,11 @@
                         </ImageView>
                     </children>
                 </AnchorPane>
-                <JFXButton fx:id="botonAsistencia" layoutX="1.0" layoutY="256.0" prefHeight="38.0" prefWidth="312.0" text="Tomar asistencia" />
-                <JFXButton fx:id="botonRegistrarAdopcion" layoutY="294.0" prefHeight="38.0" prefWidth="312.0" text="Registrar Adopción" />
+                <JFXButton fx:id="botonAsistencia" layoutX="1.0" layoutY="256.0" prefHeight="38.0" prefWidth="312.0" text="Tomar asistencia" onAction="#handlerPaseLista" />
+                <JFXButton fx:id="botonRegistrarAdopcion" layoutY="294.0" prefHeight="38.0" prefWidth="312.0" text="Registrar Adopción" onAction="#handlerVentanaRegistrarAdopcion"/>
                 <JFXButton fx:id="botonRegistrarVoluntario" layoutY="332.0" prefHeight="38.0" prefWidth="312.0" text="Registar Voluntario" />
                 <JFXButton fx:id="botonRegistrarAdoptante" layoutX="1.0" layoutY="370.0" prefHeight="38.0" prefWidth="312.0" text="Registrar Adoptante" />
-                <JFXButton fx:id="botonOpcionesAdministrador" layoutY="408.0" prefHeight="38.0" prefWidth="312.0" text="Opciones de Administrador" />
+                <JFXButton fx:id="botonRegistrarRescate" layoutY="408.0" prefHeight="38.0" prefWidth="312.0" text="Registrar Rescate" />
                 <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="18.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@/resources/Icons/list.png" />
@@ -58,7 +58,7 @@
                 </ImageView>
                 <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="18.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/resources/Icons/settings.png" />
+                        <Image url="@/resources/Icons/dog-house.png" />
                     </image>
                 </ImageView>
                 <ImageView id="fotoUsuario" fitHeight="118.0" fitWidth="119.0" layoutX="128.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +66,7 @@
                         <Image url="@/resources/Icons/boy.png" />
                     </image>
                 </ImageView>
-                <Label id="labelBienvenida" layoutX="110.0" layoutY="154.0" style="-fx-font-size: 18;" text="Bienvenido Usuario" />
+                <Label id="labelBienvenida" layoutX="110.0" layoutY="154.0" style="-fx-font-size: 18;" text="Bienvenid@ Usuario" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="314.0" prefHeight="600.0" prefWidth="903.0">

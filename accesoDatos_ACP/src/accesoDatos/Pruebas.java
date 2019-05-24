@@ -19,9 +19,7 @@ public class Pruebas {
         
         
         
-     //pruebasDAOAdoptantes();
-        
-     pruebasDAOAnimales();
+    pruebasDAOVoluntarios();
      
      
     
@@ -32,7 +30,13 @@ public class Pruebas {
     
     
     public static void pruebasDAOVoluntarios(){
-          
+        DAOVoluntarios dv = new DAOVoluntarios();
+        
+        Voluntario volun = dv.queryGetVoluntarioPorID(2);
+        
+        System.out.println(volun.getNombre());
+        
+        
     }
     
     public static void pruebasDAOAnimales(){

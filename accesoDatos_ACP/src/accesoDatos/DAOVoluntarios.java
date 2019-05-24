@@ -23,25 +23,44 @@ public class DAOVoluntarios implements DAOConexion {
     @Override
     public ArrayList transformarQuerySet() {
         Connection c = ConexionBD.getConection();
-        String query = "SELECT * "
-                + "FROM Voluntario";
+        String query = "SELECT * FROM Voluntario";
 
         try {
             PreparedStatement ps = c.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
+            System.out.println("Query Ejecutado correctamente");
 
             voluntarios = new ArrayList<>();
 
             while (rs.next()) {
+                
+                String nombre = rs.getString("nombre");
+                System.out.println(nombre);
+                
+                String telefono = rs.getString("telefono");
+                System.out.println(telefono);
+                
+                String direccion = rs.getString("direccion");
+                System.out.println(direccion);
+                
+                String idVoluntario = rs.getString("idVoluntario");
+                System.out.println(idVoluntario);
+              
                 voluntarios.add(
                         new Voluntario(
-                                rs.getString("nombre"),
-                                rs.getString("telefono"),
-                                rs.getString("direccion"),
-                                Integer.valueOf(rs.getString("idVoluntario")))
+                        nombre,
+                        telefono,
+                        direccion,
+                        Integer.valueOf(idVoluntario)
+                        )   
                 );
+                
             }
 
+            for (Voluntario voluntario : voluntarios) {
+                System.out.println(voluntario.getNombre());
+            }
+            
             return voluntarios;
 
         } catch (SQLException exception) {

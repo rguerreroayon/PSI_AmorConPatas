@@ -12,14 +12,21 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import objetosNegocio.*;
-import utilities.alertbox.AlertBox;
+import utilities.AlertBox;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -53,7 +60,7 @@ public class ControlVista_Adopcion {
     JFXButton botonRegistrarAdoptante;
 
     @FXML
-    JFXButton botonOpcionesAdministrador;
+    JFXButton botonRegistrarRescate;
 
     @FXML
     JFXButton botonConfirmarAdopcion;
@@ -353,7 +360,24 @@ public class ControlVista_Adopcion {
 
     }
 
+    public void handlerVentanaRegistrarRescate(Event event) throws IOException {
 
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("/vista/registro_mascota/vistaRegistroMascota.fxml"));
+        Scene homePageScene = new Scene(homePageParent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(homePageScene);
+        app_stage.show();
+
+
+    }
+
+    public void handlerPaseLista(Event event) throws IOException{
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("/vista/pase_lista/vistaPaseLista.fxml"));
+        Scene homePageScene = new Scene(homePageParent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(homePageScene);
+        app_stage.show();
+    }
 
 
 

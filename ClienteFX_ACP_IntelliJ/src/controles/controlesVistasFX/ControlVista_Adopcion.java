@@ -15,30 +15,40 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import manajador_ventanas.WindowsControlador;
 import objetosNegocio.*;
 import utilities.AlertBox;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.ResourceBundle;
 
 /**
  *
  * @author rob
  */
-public class ControlVista_Adopcion {
+public class ControlVista_Adopcion implements Initializable {
 
     //ControlMaster
     ControlMaster controlMaster;
+    WindowsControlador wc = new WindowsControlador();
+
+
+    @FXML
+    Label labelBienvenida;
 
     //Buttons
     @FXML
@@ -380,6 +390,9 @@ public class ControlVista_Adopcion {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
-    
+
+    }
 }

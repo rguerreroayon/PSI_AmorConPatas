@@ -12,10 +12,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.scene.input.KeyEvent;
+import manajador_ventanas.WindowsControlador;
 import objetosNegocio.Animal;
 import utilities.AlertBox;
 
@@ -33,6 +35,10 @@ public class ControlVista_RegistroMascota {
 
     //AnchorPane Padre
 
+    WindowsControlador wc = new WindowsControlador();
+
+    @FXML
+    Label labelBienvenida;
 
     //Botones Frame
     @FXML
@@ -99,6 +105,8 @@ public class ControlVista_RegistroMascota {
         botonRadioPerro.setToggleGroup(radioBotones);
         campoEspecieOtro.setDisable(true);
         campoRaza.setDisable(true);
+
+
     }
 
 

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="objetosNegocio_ACP">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/external libraries/objetosNegocio_ACP.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../objetosNegocio_ACP/dist/objetosNegocio_ACP.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

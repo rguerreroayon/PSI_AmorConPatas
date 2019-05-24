@@ -19,7 +19,7 @@ public class Pruebas {
         
         
         
-    pruebasDAOVoluntarios();
+    pruebasDAOEventos();
      
      
     
@@ -65,6 +65,21 @@ public class Pruebas {
        da.queryEliminarAdopcion(3);
        da.queryEliminarAdopcion(4);
        da.queryAnadirAdopcion(adopcion,"Corneta");
+    }
+    
+    public static void pruebasDAOEventos(){
+        
+        ArrayList<Evento> eventos = new ArrayList();
+        
+        DAOEventos de = new DAOEventos();
+        
+        eventos = de.transformarQuerySet();
+        
+        
+        for (Evento evento : eventos) {
+            System.out.println(evento.getNombreEvento());
+        }
+        
     }
     
     
